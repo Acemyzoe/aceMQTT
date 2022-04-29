@@ -1,4 +1,4 @@
-# Install script for directory: /home/ace/文档/mqtt/client/nano
+# Install script for directory: /home/ace/文档/aceMQTT/client/nano
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ace/文档/mqtt/client/nano/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ace/文档/aceMQTT/client/nano/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

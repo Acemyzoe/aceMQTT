@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ace/文档/mqtt/client/nano/nanoclient.c" "/home/ace/文档/mqtt/client/nano/build/CMakeFiles/nanoclient.dir/nanoclient.c.o"
+  "/home/ace/文档/aceMQTT/client/nano/nanoclient.c" "/home/ace/文档/aceMQTT/client/nano/build/CMakeFiles/nanoclient.dir/nanoclient.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

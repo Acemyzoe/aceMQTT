@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ace/文档/mqtt/client/nano
+CMAKE_SOURCE_DIR = /home/ace/文档/aceMQTT/client/nano
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ace/文档/mqtt/client/nano/build
+CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/nano/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/nanoclient.dir/clean
 CMakeFiles/nanoclient.dir/all:
 	$(MAKE) -f CMakeFiles/nanoclient.dir/build.make CMakeFiles/nanoclient.dir/depend
 	$(MAKE) -f CMakeFiles/nanoclient.dir/build.make CMakeFiles/nanoclient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/mqtt/client/nano/build/CMakeFiles --progress-num=1,2 "Built target nanoclient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/nano/build/CMakeFiles --progress-num=1,2 "Built target nanoclient"
 .PHONY : CMakeFiles/nanoclient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nanoclient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/mqtt/client/nano/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/nano/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/nanoclient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/mqtt/client/nano/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/nano/build/CMakeFiles 0
 .PHONY : CMakeFiles/nanoclient.dir/rule
 
 # Convenience name for target.

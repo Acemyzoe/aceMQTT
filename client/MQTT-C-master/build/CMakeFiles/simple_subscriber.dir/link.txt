@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/simple_subscriber.dir/examples/simple_subscriber.c.o  -o simple_subscriber  libmqttc.a -lpthread 

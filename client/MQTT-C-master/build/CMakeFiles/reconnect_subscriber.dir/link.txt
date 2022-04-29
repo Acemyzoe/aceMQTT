@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/reconnect_subscriber.dir/examples/reconnect_subscriber.c.o  -o reconnect_subscriber  libmqttc.a -lpthread 

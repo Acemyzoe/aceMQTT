@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
         printf("Connected to MQTT Broker!\n");
     }
     // subscribe topic
-    MQTTClient_subscribe(client, TOPIC, QOS);
+    // MQTTClient_subscribe(client, TOPIC, QOS);
 
     char payload[16];
     for (int i = 0; i < 3; i += 1)

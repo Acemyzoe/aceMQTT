@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/nanoclient.dir/nanoclient.c.o  -o nanoclient   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -lpaho-mqtt3c 

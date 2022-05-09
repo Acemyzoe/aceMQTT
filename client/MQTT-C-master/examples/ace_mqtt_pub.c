@@ -14,7 +14,7 @@ void *client_refresher(void *client)
     }
     return NULL;
 }
-void publish_callback(void **unused, struct mqtt_response_publish *published);
+void publish_callback(void **unused, struct mqtt_response_publish *published){};
 int main()
 {
     struct mqtt_client client;
@@ -52,16 +52,4 @@ int main()
         mqtt_publish(&client, "temperature", buf, strlen(buf), 1);
         sleep(1);
     }
-}
-
-void publish_callback(void **unused, struct mqtt_response_publish *published)
-{
-    // /* note that published->topic_name is NOT null-terminated (here we'll change it to a c-string) */
-    // char *topic_name = (char *)malloc(published->topic_name_size + 1);
-    // memcpy(topic_name, published->topic_name, published->topic_name_size);
-    // topic_name[published->topic_name_size] = '\0';
-
-    // printf("Received publish('%s'): %s\n", topic_name, (const char *)published->application_message);
-
-    // free(topic_name);
 }

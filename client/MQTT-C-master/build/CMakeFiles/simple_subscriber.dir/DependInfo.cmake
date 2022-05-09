@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ace/文档/mqtt/client/MQTT-C-master/examples/simple_subscriber.c" "/home/ace/文档/mqtt/client/MQTT-C-master/build/CMakeFiles/simple_subscriber.dir/examples/simple_subscriber.c.o"
+  "/home/ace/文档/aceMQTT/client/MQTT-C-master/examples/simple_subscriber.c" "/home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles/simple_subscriber.dir/examples/simple_subscriber.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ace/文档/mqtt/client/MQTT-C-master/build/CMakeFiles/mqttc.dir/DependInfo.cmake"
+  "/home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles/mqttc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

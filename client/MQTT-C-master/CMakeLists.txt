@@ -92,8 +92,10 @@ if(MQTT_C_EXAMPLES)
         add_executable(reconnect_subscriber examples/reconnect_subscriber.c)
         target_link_libraries(reconnect_subscriber Threads::Threads mqttc)
 
-        add_executable(ace_mqtt examples/ace_mqtt.c)
-        target_link_libraries(ace_mqtt Threads::Threads mqttc)
+        add_executable(ace_mqtt_sub examples/ace_mqtt_sub.c)
+        target_link_libraries(ace_mqtt_sub Threads::Threads mqttc)
+        add_executable(ace_mqtt_pub examples/ace_mqtt_pub.c)
+        target_link_libraries(ace_mqtt_pub Threads::Threads mqttc)
 
     endif()
 endif()

@@ -4,5 +4,5 @@
 CMakeFiles/simple_subscriber.dir/examples/simple_subscriber.c.o
  ../include/mqtt.h
  ../include/mqtt_pal.h
- /home/ace/文档/mqtt/client/MQTT-C-master/examples/simple_subscriber.c
- /home/ace/文档/mqtt/client/MQTT-C-master/examples/templates/posix_sockets.h
+ /home/ace/文档/aceMQTT/client/MQTT-C-master/examples/simple_subscriber.c
+ /home/ace/文档/aceMQTT/client/MQTT-C-master/examples/templates/posix_sockets.h

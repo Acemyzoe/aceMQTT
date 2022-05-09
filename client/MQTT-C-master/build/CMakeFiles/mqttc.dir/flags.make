@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/ace/文档/mqtt/client/MQTT-C-master/include 
+C_INCLUDES = -I/home/ace/文档/aceMQTT/client/MQTT-C-master/include 
 

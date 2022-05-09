@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ace/文档/aceMQTT/client/MQTT-C-master/examples/reconnect_subscriber.c" "/home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles/reconnect_subscriber.dir/examples/reconnect_subscriber.c.o"
+  "/home/ace/文档/aceMQTT/client/MQTT-C-master/examples/ace_mqtt_sub.c" "/home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles/ace_mqtt_sub.dir/examples/ace_mqtt_sub.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -4,5 +4,5 @@
 CMakeFiles/ace_mqtt.dir/examples/ace_mqtt.c.o
  ../include/mqtt.h
  ../include/mqtt_pal.h
- /home/ace/文档/mqtt/client/MQTT-C-master/examples/ace_mqtt.c
- /home/ace/文档/mqtt/client/MQTT-C-master/examples/templates/posix_sockets.h
+ /home/ace/文档/aceMQTT/client/MQTT-C-master/examples/ace_mqtt.c
+ /home/ace/文档/aceMQTT/client/MQTT-C-master/examples/templates/posix_sockets.h

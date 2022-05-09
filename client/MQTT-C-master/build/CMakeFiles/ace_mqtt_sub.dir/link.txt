@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/ace_mqtt_sub.dir/examples/ace_mqtt_sub.c.o  -o ace_mqtt_sub  libmqttc.a -lpthread 

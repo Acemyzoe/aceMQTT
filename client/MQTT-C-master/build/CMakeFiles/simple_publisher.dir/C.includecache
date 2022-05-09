@@ -42,7 +42,7 @@ stdint.h
 openssl/bio.h
 -
 
-/home/ace/文档/mqtt/client/MQTT-C-master/examples/simple_publisher.c
+/home/ace/文档/aceMQTT/client/MQTT-C-master/examples/simple_publisher.c
 unistd.h
 -
 stdlib.h
@@ -54,9 +54,9 @@ pthread.h
 mqtt.h
 -
 templates/posix_sockets.h
-/home/ace/文档/mqtt/client/MQTT-C-master/examples/templates/posix_sockets.h
+/home/ace/文档/aceMQTT/client/MQTT-C-master/examples/templates/posix_sockets.h
 
-/home/ace/文档/mqtt/client/MQTT-C-master/examples/templates/posix_sockets.h
+/home/ace/文档/aceMQTT/client/MQTT-C-master/examples/templates/posix_sockets.h
 stdio.h
 -
 sys/types.h

@@ -1,4 +1,4 @@
-# Install script for directory: /home/ace/文档/mqtt/client/MQTT-C-master
+# Install script for directory: /home/ace/文档/aceMQTT/client/MQTT-C-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,11 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ace/文档/mqtt/client/MQTT-C-master/build/libmqttc.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ace/文档/aceMQTT/client/MQTT-C-master/build/libmqttc.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ace/文档/mqtt/client/MQTT-C-master/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ace/文档/aceMQTT/client/MQTT-C-master/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ace/文档/mqtt/client/MQTT-C-master/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ace/文档/aceMQTT/client/MQTT-C-master/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

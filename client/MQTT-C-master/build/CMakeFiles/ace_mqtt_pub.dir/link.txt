@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/ace_mqtt_pub.dir/examples/ace_mqtt_pub.c.o  -o ace_mqtt_pub  libmqttc.a -lpthread 

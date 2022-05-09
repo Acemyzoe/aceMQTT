@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ace/文档/mqtt/client/MQTT-C-master
+CMAKE_SOURCE_DIR = /home/ace/文档/aceMQTT/client/MQTT-C-master
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ace/文档/mqtt/client/MQTT-C-master/build
+CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/MQTT-C-master/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/mqtt/client/MQTT-C-master/build/CMakeFiles /home/ace/文档/mqtt/client/MQTT-C-master/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles /home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/mqtt/client/MQTT-C-master/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/MQTT-C-master/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,6 +155,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named ace_mqtt_pub
+
+# Build rule for target.
+ace_mqtt_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ace_mqtt_pub
+.PHONY : ace_mqtt_pub
+
+# fast build rule for target.
+ace_mqtt_pub/fast:
+	$(MAKE) -f CMakeFiles/ace_mqtt_pub.dir/build.make CMakeFiles/ace_mqtt_pub.dir/build
+.PHONY : ace_mqtt_pub/fast
+
+#=============================================================================
+# Target rules for targets named ace_mqtt_sub
+
+# Build rule for target.
+ace_mqtt_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ace_mqtt_sub
+.PHONY : ace_mqtt_sub
+
+# fast build rule for target.
+ace_mqtt_sub/fast:
+	$(MAKE) -f CMakeFiles/ace_mqtt_sub.dir/build.make CMakeFiles/ace_mqtt_sub.dir/build
+.PHONY : ace_mqtt_sub/fast
 
 #=============================================================================
 # Target rules for targets named reconnect_subscriber
@@ -196,19 +222,6 @@ simple_publisher/fast:
 .PHONY : simple_publisher/fast
 
 #=============================================================================
-# Target rules for targets named ace_mqtt
-
-# Build rule for target.
-ace_mqtt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ace_mqtt
-.PHONY : ace_mqtt
-
-# fast build rule for target.
-ace_mqtt/fast:
-	$(MAKE) -f CMakeFiles/ace_mqtt.dir/build.make CMakeFiles/ace_mqtt.dir/build
-.PHONY : ace_mqtt/fast
-
-#=============================================================================
 # Target rules for targets named mqttc
 
 # Build rule for target.
@@ -221,32 +234,59 @@ mqttc/fast:
 	$(MAKE) -f CMakeFiles/mqttc.dir/build.make CMakeFiles/mqttc.dir/build
 .PHONY : mqttc/fast
 
-examples/ace_mqtt.o: examples/ace_mqtt.c.o
+examples/ace_mqtt_pub.o: examples/ace_mqtt_pub.c.o
 
-.PHONY : examples/ace_mqtt.o
+.PHONY : examples/ace_mqtt_pub.o
 
 # target to build an object file
-examples/ace_mqtt.c.o:
-	$(MAKE) -f CMakeFiles/ace_mqtt.dir/build.make CMakeFiles/ace_mqtt.dir/examples/ace_mqtt.c.o
-.PHONY : examples/ace_mqtt.c.o
+examples/ace_mqtt_pub.c.o:
+	$(MAKE) -f CMakeFiles/ace_mqtt_pub.dir/build.make CMakeFiles/ace_mqtt_pub.dir/examples/ace_mqtt_pub.c.o
+.PHONY : examples/ace_mqtt_pub.c.o
 
-examples/ace_mqtt.i: examples/ace_mqtt.c.i
+examples/ace_mqtt_pub.i: examples/ace_mqtt_pub.c.i
 
-.PHONY : examples/ace_mqtt.i
+.PHONY : examples/ace_mqtt_pub.i
 
 # target to preprocess a source file
-examples/ace_mqtt.c.i:
-	$(MAKE) -f CMakeFiles/ace_mqtt.dir/build.make CMakeFiles/ace_mqtt.dir/examples/ace_mqtt.c.i
-.PHONY : examples/ace_mqtt.c.i
+examples/ace_mqtt_pub.c.i:
+	$(MAKE) -f CMakeFiles/ace_mqtt_pub.dir/build.make CMakeFiles/ace_mqtt_pub.dir/examples/ace_mqtt_pub.c.i
+.PHONY : examples/ace_mqtt_pub.c.i
 
-examples/ace_mqtt.s: examples/ace_mqtt.c.s
+examples/ace_mqtt_pub.s: examples/ace_mqtt_pub.c.s
 
-.PHONY : examples/ace_mqtt.s
+.PHONY : examples/ace_mqtt_pub.s
 
 # target to generate assembly for a file
-examples/ace_mqtt.c.s:
-	$(MAKE) -f CMakeFiles/ace_mqtt.dir/build.make CMakeFiles/ace_mqtt.dir/examples/ace_mqtt.c.s
-.PHONY : examples/ace_mqtt.c.s
+examples/ace_mqtt_pub.c.s:
+	$(MAKE) -f CMakeFiles/ace_mqtt_pub.dir/build.make CMakeFiles/ace_mqtt_pub.dir/examples/ace_mqtt_pub.c.s
+.PHONY : examples/ace_mqtt_pub.c.s
+
+examples/ace_mqtt_sub.o: examples/ace_mqtt_sub.c.o
+
+.PHONY : examples/ace_mqtt_sub.o
+
+# target to build an object file
+examples/ace_mqtt_sub.c.o:
+	$(MAKE) -f CMakeFiles/ace_mqtt_sub.dir/build.make CMakeFiles/ace_mqtt_sub.dir/examples/ace_mqtt_sub.c.o
+.PHONY : examples/ace_mqtt_sub.c.o
+
+examples/ace_mqtt_sub.i: examples/ace_mqtt_sub.c.i
+
+.PHONY : examples/ace_mqtt_sub.i
+
+# target to preprocess a source file
+examples/ace_mqtt_sub.c.i:
+	$(MAKE) -f CMakeFiles/ace_mqtt_sub.dir/build.make CMakeFiles/ace_mqtt_sub.dir/examples/ace_mqtt_sub.c.i
+.PHONY : examples/ace_mqtt_sub.c.i
+
+examples/ace_mqtt_sub.s: examples/ace_mqtt_sub.c.s
+
+.PHONY : examples/ace_mqtt_sub.s
+
+# target to generate assembly for a file
+examples/ace_mqtt_sub.c.s:
+	$(MAKE) -f CMakeFiles/ace_mqtt_sub.dir/build.make CMakeFiles/ace_mqtt_sub.dir/examples/ace_mqtt_sub.c.s
+.PHONY : examples/ace_mqtt_sub.c.s
 
 examples/reconnect_subscriber.o: examples/reconnect_subscriber.c.o
 
@@ -394,15 +434,19 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... ace_mqtt_pub"
+	@echo "... ace_mqtt_sub"
 	@echo "... reconnect_subscriber"
 	@echo "... install/strip"
 	@echo "... simple_subscriber"
 	@echo "... simple_publisher"
-	@echo "... ace_mqtt"
 	@echo "... mqttc"
-	@echo "... examples/ace_mqtt.o"
-	@echo "... examples/ace_mqtt.i"
-	@echo "... examples/ace_mqtt.s"
+	@echo "... examples/ace_mqtt_pub.o"
+	@echo "... examples/ace_mqtt_pub.i"
+	@echo "... examples/ace_mqtt_pub.s"
+	@echo "... examples/ace_mqtt_sub.o"
+	@echo "... examples/ace_mqtt_sub.i"
+	@echo "... examples/ace_mqtt_sub.s"
 	@echo "... examples/reconnect_subscriber.o"
 	@echo "... examples/reconnect_subscriber.i"
 	@echo "... examples/reconnect_subscriber.s"

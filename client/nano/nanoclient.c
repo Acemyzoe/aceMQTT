@@ -3,7 +3,7 @@
 #include "unistd.h"
 #include "MQTTClient.h"
 
-#define ADDRESS "tcp://localhost:1235"
+#define ADDRESS "tcp://localhost:1883"
 #define USERNAME "emqx"
 #define PASSWORD "public"
 #define CLIENTID "c-client"

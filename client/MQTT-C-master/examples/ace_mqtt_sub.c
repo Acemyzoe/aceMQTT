@@ -27,7 +27,7 @@ void *client_refresher(void *client)
     return NULL;
 }
 
-int main()
+int sub()
 {
     struct mqtt_client client;
     /* open the non-blocking TCP socket (connecting to the broker) */
@@ -64,8 +64,15 @@ int main()
         fprintf(stderr, "Failed to start client daemon.\n");
     }
     /* subscribe to "toaster/temperature" with a max QoS level of 0 */
-    mqtt_subscribe(&client, "temperature", 0);
+    mqtt_subscribe(&client, "datetime", 0);
 
-    while (fgetc(stdin) != EOF)
-        ;
+    getchar();
+
+    return 0;
+}
+
+int main()
+{
+    sub();
+    return 0;
 }

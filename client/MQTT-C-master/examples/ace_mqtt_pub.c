@@ -14,8 +14,10 @@ void *client_refresher(void *client)
     }
     return NULL;
 }
+
 void publish_callback(void **unused, struct mqtt_response_publish *published){};
-int main()
+
+int pub()
 {
     struct mqtt_client client;
     /* open the non-blocking TCP socket (connecting to the broker) */
@@ -49,7 +51,15 @@ int main()
     {
         char buf[100];
         sprintf(buf, "temperature: %d", i);
-        mqtt_publish(&client, "temperature", buf, strlen(buf), 1);
+        mqtt_publish(&client, "datetime", buf, strlen(buf) + 1, 1);
         sleep(1);
     }
+
+    return 0;
+}
+
+int main()
+{
+    pub();
+    return 0;
 }

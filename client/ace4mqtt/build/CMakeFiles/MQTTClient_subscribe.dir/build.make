@@ -79,7 +79,6 @@ MQTTClient_subscribe_EXTERNAL_OBJECTS =
 
 MQTTClient_subscribe: CMakeFiles/MQTTClient_subscribe.dir/src/MQTTClient_subscribe.c.o
 MQTTClient_subscribe: CMakeFiles/MQTTClient_subscribe.dir/build.make
-MQTTClient_subscribe: /usr/local/lib/libpaho-mqtt3c.so
 MQTTClient_subscribe: CMakeFiles/MQTTClient_subscribe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable MQTTClient_subscribe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MQTTClient_subscribe.dir/link.txt --verbose=$(VERBOSE)

@@ -16,12 +16,11 @@ option(EXAMPLES "Build examples?" ON)
 # Build examples
 if(EXAMPLES)
     find_package(Threads REQUIRED)
-    find_library(LIB paho-mqtt3c ${PROJECT_SOURCE_DIR}/lib/paho)
 
     add_executable(MQTTClient_subscribe src/MQTTClient_subscribe.c)
-    target_link_libraries(MQTTClient_subscribe Threads::Threads ${LIB})
+    target_link_libraries(MQTTClient_subscribe Threads::Threads paho-mqtt3c)
 
     add_executable(MQTTClient_publish src/MQTTClient_publish.c)
-    target_link_libraries(MQTTClient_publish Threads::Threads ${LIB})
+    target_link_libraries(MQTTClient_publish Threads::Threads paho-mqtt3c)
 
 endif()

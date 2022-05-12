@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/MQTTClient_subscribe.dir/MQTTClient_subscribe.c.o  -o MQTTClient_subscribe  -Wl,-rpath,/home/ace/文档/aceMQTT/client/paho.mqtt.c-master/build2/src: ../libpaho-mqtt3c.so.1.3.10 -lc -ldl -lpthread -lrt -lanl 

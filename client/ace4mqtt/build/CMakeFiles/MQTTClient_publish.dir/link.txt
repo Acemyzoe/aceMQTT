@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/MQTTClient_publish.dir/src/MQTTClient_publish.c.o  -o MQTTClient_publish   -L/home/ace/文档/aceMQTT/client/ace4mqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/ace4mqtt/lib:/usr/local/lib /usr/local/lib/libpaho-mqtt3c.so -lpthread 

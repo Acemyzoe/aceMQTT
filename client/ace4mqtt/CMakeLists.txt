@@ -16,7 +16,7 @@ option(EXAMPLES "Build examples?" ON)
 # Build examples
 if(EXAMPLES)
     find_package(Threads REQUIRED)
-    find_library(LIB paho-mqtt3c ${PROJECT_SOURCE_DIR}/lib)
+    find_library(LIB paho-mqtt3c ${PROJECT_SOURCE_DIR}/lib/paho)
 
     add_executable(MQTTClient_subscribe src/MQTTClient_subscribe.c)
     target_link_libraries(MQTTClient_subscribe Threads::Threads ${LIB})

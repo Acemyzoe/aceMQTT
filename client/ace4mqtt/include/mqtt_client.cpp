@@ -205,7 +205,7 @@ int mqtt_client_pub(mqtt_client client, const char *topic, const char *payload, 
         return MQTTCLIENT_DISCONNECTED;
     }
 
-    std::cout << "MQTTClient_publish, topic :" << topic << ", playlad: " << payload << std::endl;
+    // std::cout << "MQTTClient_publish, topic :" << topic << ", playlad: " << payload << std::endl;
     MQTTClient_publish(client->mqtt, topic, playload_len, payload, 1, 0, NULL);
 
     return MQTTCLIENT_SUCCESS;

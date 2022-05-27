@@ -5,7 +5,7 @@
 #endif
 
 #include "mqtt_client.h"
-#include <iostream>
+
 #include <string>
 #include <thread>
 
@@ -31,7 +31,8 @@ void testThread(int id, mqtt_client client)
 
 int pos_update_cb(mqtt_client client, const char *playload, size_t len, int qos, void *user_data)
 {
-    std::cout << "pos_update_cb, playload: " << playload << ", qos: " << qos << std::endl;
+    printf("pos_update_cb, playload: %.*s, qos: %d/n", len, playload, qos);
+
     return 0;
 }
 

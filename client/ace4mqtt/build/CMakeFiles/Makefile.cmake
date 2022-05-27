@@ -124,6 +124,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/test_client.dir/DependInfo.cmake"
   "CMakeFiles/MQTTClient_publish.dir/DependInfo.cmake"
   "CMakeFiles/MQTTClient_subscribe.dir/DependInfo.cmake"
   )

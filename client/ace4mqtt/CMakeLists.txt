@@ -23,4 +23,7 @@ if(EXAMPLES)
     add_executable(MQTTClient_publish src/MQTTClient_publish.c)
     target_link_libraries(MQTTClient_publish Threads::Threads paho-mqtt3c)
 
+    add_executable(test_client src/test_client.cpp include/mqtt_client.cpp)
+    target_link_libraries(test_client Threads::Threads paho-mqtt3c)
+
 endif()

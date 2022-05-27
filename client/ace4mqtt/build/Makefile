@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_client
+
+# Build rule for target.
+test_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_client
+.PHONY : test_client
+
+# fast build rule for target.
+test_client/fast:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/build
+.PHONY : test_client/fast
+
+#=============================================================================
 # Target rules for targets named MQTTClient_publish
 
 # Build rule for target.
@@ -135,6 +148,33 @@ MQTTClient_subscribe: cmake_check_build_system
 MQTTClient_subscribe/fast:
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/build
 .PHONY : MQTTClient_subscribe/fast
+
+include/mqtt_client.o: include/mqtt_client.cpp.o
+
+.PHONY : include/mqtt_client.o
+
+# target to build an object file
+include/mqtt_client.cpp.o:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqtt_client.cpp.o
+.PHONY : include/mqtt_client.cpp.o
+
+include/mqtt_client.i: include/mqtt_client.cpp.i
+
+.PHONY : include/mqtt_client.i
+
+# target to preprocess a source file
+include/mqtt_client.cpp.i:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqtt_client.cpp.i
+.PHONY : include/mqtt_client.cpp.i
+
+include/mqtt_client.s: include/mqtt_client.cpp.s
+
+.PHONY : include/mqtt_client.s
+
+# target to generate assembly for a file
+include/mqtt_client.cpp.s:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqtt_client.cpp.s
+.PHONY : include/mqtt_client.cpp.s
 
 src/MQTTClient_publish.o: src/MQTTClient_publish.c.o
 
@@ -190,6 +230,33 @@ src/MQTTClient_subscribe.c.s:
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/src/MQTTClient_subscribe.c.s
 .PHONY : src/MQTTClient_subscribe.c.s
 
+src/test_client.o: src/test_client.cpp.o
+
+.PHONY : src/test_client.o
+
+# target to build an object file
+src/test_client.cpp.o:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/src/test_client.cpp.o
+.PHONY : src/test_client.cpp.o
+
+src/test_client.i: src/test_client.cpp.i
+
+.PHONY : src/test_client.i
+
+# target to preprocess a source file
+src/test_client.cpp.i:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/src/test_client.cpp.i
+.PHONY : src/test_client.cpp.i
+
+src/test_client.s: src/test_client.cpp.s
+
+.PHONY : src/test_client.s
+
+# target to generate assembly for a file
+src/test_client.cpp.s:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/src/test_client.cpp.s
+.PHONY : src/test_client.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -197,15 +264,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... test_client"
 	@echo "... rebuild_cache"
 	@echo "... MQTTClient_publish"
 	@echo "... MQTTClient_subscribe"
+	@echo "... include/mqtt_client.o"
+	@echo "... include/mqtt_client.i"
+	@echo "... include/mqtt_client.s"
 	@echo "... src/MQTTClient_publish.o"
 	@echo "... src/MQTTClient_publish.i"
 	@echo "... src/MQTTClient_publish.s"
 	@echo "... src/MQTTClient_subscribe.o"
 	@echo "... src/MQTTClient_subscribe.i"
 	@echo "... src/MQTTClient_subscribe.s"
+	@echo "... src/test_client.o"
+	@echo "... src/test_client.i"
+	@echo "... src/test_client.s"
 .PHONY : help
 
 

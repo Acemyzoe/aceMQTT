@@ -6,19 +6,29 @@
 
 #IncludeRegexTransform: 
 
-../include/mqtt_client.h
-
-/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_client.cpp
-unistd.h
+../include/cmqtt.hpp
+MQTTAsync.h
+../include/MQTTAsync.h
+string
 -
-sys/prctl.h
--
-mqtt_client.h
-/home/ace/文档/aceMQTT/client/ace4mqtt/src/mqtt_client.h
 iostream
 -
 string
 -
+functional
+-
+algorithm
+-
 thread
 -
+mutex
+-
+string.h
+-
+iostream
+-
+
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_client.cpp
+cmqtt.hpp
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/cmqtt.hpp
 

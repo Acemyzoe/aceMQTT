@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_client.dir/include/mqtt_client.cpp.o"
   "CMakeFiles/test_client.dir/src/test_client.cpp.o"
   "test_client"
   "test_client.pdb"

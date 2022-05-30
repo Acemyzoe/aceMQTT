@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ace/文档/aceMQTT/client/ace4mqtt/include/mqtt_client.cpp" "/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/test_client.dir/include/mqtt_client.cpp.o"
   "/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_client.cpp" "/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/test_client.dir/src/test_client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -12,6 +11,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "../src"
   )
 
 # Targets to which this target links.

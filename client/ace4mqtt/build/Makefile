@@ -149,33 +149,6 @@ MQTTClient_subscribe/fast:
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/build
 .PHONY : MQTTClient_subscribe/fast
 
-include/mqtt_client.o: include/mqtt_client.cpp.o
-
-.PHONY : include/mqtt_client.o
-
-# target to build an object file
-include/mqtt_client.cpp.o:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqtt_client.cpp.o
-.PHONY : include/mqtt_client.cpp.o
-
-include/mqtt_client.i: include/mqtt_client.cpp.i
-
-.PHONY : include/mqtt_client.i
-
-# target to preprocess a source file
-include/mqtt_client.cpp.i:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqtt_client.cpp.i
-.PHONY : include/mqtt_client.cpp.i
-
-include/mqtt_client.s: include/mqtt_client.cpp.s
-
-.PHONY : include/mqtt_client.s
-
-# target to generate assembly for a file
-include/mqtt_client.cpp.s:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqtt_client.cpp.s
-.PHONY : include/mqtt_client.cpp.s
-
 src/MQTTClient_publish.o: src/MQTTClient_publish.c.o
 
 .PHONY : src/MQTTClient_publish.o
@@ -268,9 +241,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MQTTClient_publish"
 	@echo "... MQTTClient_subscribe"
-	@echo "... include/mqtt_client.o"
-	@echo "... include/mqtt_client.i"
-	@echo "... include/mqtt_client.s"
 	@echo "... src/MQTTClient_publish.o"
 	@echo "... src/MQTTClient_publish.i"
 	@echo "... src/MQTTClient_publish.s"

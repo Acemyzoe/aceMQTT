@@ -30,16 +30,28 @@ struct __mqtt_client
 
 static const char *DEFAULT_ADDR = "localhost:1883";
 
-int messageArrived(void *context, char *topicName, int topicLen, MQTTClient_message *message)
-{
-    printf("delivered- %p, topic: %s\n", context, topicName);
-
-    return 0;
-}
+volatile MQTTClient_deliveryToken deliveredtoken;
 
 void delivered(void *context, MQTTClient_deliveryToken dt)
 {
-    printf("delivered- %p\n", context);
+    // printf("Message with token value %d delivery confirmed\n", dt);
+    deliveredtoken = dt;
+}
+
+int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
+{
+    printf("Message arrived\n");
+    printf("     topic: %s\n", topicName);
+    printf("   message: %.*s\n", message->payloadlen, (char *)message->payload);
+    MQTTClient_freeMessage(&message);
+    MQTTClient_free(topicName);
+    return 0;
+}
+
+void connlost(void *context, char *cause)
+{
+    printf("\nConnection lost\n");
+    printf("     cause: %s\n", cause);
 }
 
 mqtt_client mqtt_client_create(const char *path, const char *id)
@@ -65,50 +77,8 @@ mqtt_client mqtt_client_create(const char *path, const char *id)
                 return nullptr;
             }
         }
-
-        // 连接一次
-        int rc = MQTTClient_connect(client->mqtt, &client->conn_opts);
-        if (rc != MQTTCLIENT_SUCCESS)
-        {
-            printf("failed to connect to mqtt server\n");
-        }
-
         client->is_running = true;
-        client->thread = std::thread([client]()
-                                     {
-            while (client->is_running) {
-                if (!MQTTClient_isConnected(client->mqtt)) {    // 断开后重新连接
-                    printf("reconnect\n");
-                    int rc = MQTTClient_connect(client->mqtt, &client->conn_opts);
-                    if (rc != MQTTCLIENT_SUCCESS) {
-                        printf("failed to connect to mqtt server\n");
-                    }
-
-                    // 重新sub
-                    mqtt_client_sub(client);
-                } else {
-                    char* topic = NULL;
-                    int topicLen;
-                    MQTTClient_message* msg = NULL;
-
-                    int rc = MQTTClient_receive(client->mqtt, &topic, &topicLen, &msg, 1000);
-                    if (msg) {
-
-                        auto it = client->sub_list.find(std::string(topic));
-                        if (it != client->sub_list.end()) {
-                            std::get<1>(it->second)(client, (const char*)msg->payload, msg->payloadlen, msg->qos, std::get<2>(it->second));
-                        }
-
-                        MQTTClient_freeMessage(&msg);
-                        MQTTClient_free(topic);
-                    }
-                    if (rc != MQTTCLIENT_SUCCESS) {
-                        printf("err: %d\n", rc);
-                    }
-                }
-            } });
     }
-
     return client;
 }
 
@@ -153,11 +123,28 @@ int mqtt_client_sub(mqtt_client client)
 {
     if (client == NULL || !client->mqtt)
     {
+        printf("mqtt client is null\n");
         return MQTTCLIENT_FAILURE;
+    }
+
+    client->conn_opts.keepAliveInterval = 20;
+    client->conn_opts.cleansession = 1;
+
+    int rc;
+    if ((rc = MQTTClient_setCallbacks(client->mqtt, NULL, connlost, msgarrvd, delivered)) != MQTTCLIENT_SUCCESS)
+    {
+        printf("Failed to set callbacks, return code %d\n", rc);
+        rc = EXIT_FAILURE;
+    }
+    if ((rc = MQTTClient_connect(client->mqtt, &client->conn_opts)) != MQTTCLIENT_SUCCESS)
+    {
+        printf("Failed to connect, return code %d\n", rc);
+        rc = EXIT_FAILURE;
     }
 
     if (!MQTTClient_isConnected(client->mqtt))
     {
+        printf("reconnect\n");
         return MQTTCLIENT_DISCONNECTED;
     }
 
@@ -198,6 +185,14 @@ int mqtt_client_pub(mqtt_client client, const char *topic, const char *payload, 
     if (client == NULL || !client->mqtt)
     {
         return MQTTCLIENT_FAILURE;
+    }
+
+    int rc;
+
+    if ((rc = MQTTClient_connect(client->mqtt, &client->conn_opts)) != MQTTCLIENT_SUCCESS)
+    {
+        printf("Failed to connect, return code %d\n", rc);
+        rc = EXIT_FAILURE;
     }
 
     if (!MQTTClient_isConnected(client->mqtt))

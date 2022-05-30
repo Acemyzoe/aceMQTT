@@ -53,8 +53,9 @@ CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/ace4mqtt/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/test_client.dir/all
+all: CMakeFiles/test_cmqtt.dir/all
 all: CMakeFiles/MQTTClient_publish.dir/all
+all: CMakeFiles/test_ccmqtt.dir/all
 all: CMakeFiles/MQTTClient_subscribe.dir/all
 
 .PHONY : all
@@ -65,38 +66,39 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/test_client.dir/clean
+clean: CMakeFiles/test_cmqtt.dir/clean
 clean: CMakeFiles/MQTTClient_publish.dir/clean
+clean: CMakeFiles/test_ccmqtt.dir/clean
 clean: CMakeFiles/MQTTClient_subscribe.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test_client.dir
+# Target rules for target CMakeFiles/test_cmqtt.dir
 
 # All Build rule for target.
-CMakeFiles/test_client.dir/all:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/depend
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=5,6 "Built target test_client"
-.PHONY : CMakeFiles/test_client.dir/all
+CMakeFiles/test_cmqtt.dir/all:
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/depend
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=7,8 "Built target test_cmqtt"
+.PHONY : CMakeFiles/test_cmqtt.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test_client.dir/rule: cmake_check_build_system
+CMakeFiles/test_cmqtt.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_client.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_cmqtt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 0
-.PHONY : CMakeFiles/test_client.dir/rule
+.PHONY : CMakeFiles/test_cmqtt.dir/rule
 
 # Convenience name for target.
-test_client: CMakeFiles/test_client.dir/rule
+test_cmqtt: CMakeFiles/test_cmqtt.dir/rule
 
-.PHONY : test_client
+.PHONY : test_cmqtt
 
 # clean rule for target.
-CMakeFiles/test_client.dir/clean:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/clean
-.PHONY : CMakeFiles/test_client.dir/clean
+CMakeFiles/test_cmqtt.dir/clean:
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/clean
+.PHONY : CMakeFiles/test_cmqtt.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/MQTTClient_publish.dir
@@ -124,6 +126,33 @@ MQTTClient_publish: CMakeFiles/MQTTClient_publish.dir/rule
 CMakeFiles/MQTTClient_publish.dir/clean:
 	$(MAKE) -f CMakeFiles/MQTTClient_publish.dir/build.make CMakeFiles/MQTTClient_publish.dir/clean
 .PHONY : CMakeFiles/MQTTClient_publish.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_ccmqtt.dir
+
+# All Build rule for target.
+CMakeFiles/test_ccmqtt.dir/all:
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/depend
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=5,6 "Built target test_ccmqtt"
+.PHONY : CMakeFiles/test_ccmqtt.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_ccmqtt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_ccmqtt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_ccmqtt.dir/rule
+
+# Convenience name for target.
+test_ccmqtt: CMakeFiles/test_ccmqtt.dir/rule
+
+.PHONY : test_ccmqtt
+
+# clean rule for target.
+CMakeFiles/test_ccmqtt.dir/clean:
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/clean
+.PHONY : CMakeFiles/test_ccmqtt.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/MQTTClient_subscribe.dir

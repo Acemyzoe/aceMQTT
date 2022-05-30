@@ -28,7 +28,7 @@ string.h
 iostream
 -
 
-/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_client.cpp
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_cmqtt.cpp
 cmqtt.hpp
 /home/ace/文档/aceMQTT/client/ace4mqtt/src/cmqtt.hpp
 

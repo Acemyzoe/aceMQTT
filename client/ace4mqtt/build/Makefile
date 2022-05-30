@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_client
+# Target rules for targets named test_cmqtt
 
 # Build rule for target.
-test_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_client
-.PHONY : test_client
+test_cmqtt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_cmqtt
+.PHONY : test_cmqtt
 
 # fast build rule for target.
-test_client/fast:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/build
-.PHONY : test_client/fast
+test_cmqtt/fast:
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/build
+.PHONY : test_cmqtt/fast
 
 #=============================================================================
 # Target rules for targets named MQTTClient_publish
@@ -135,6 +135,19 @@ MQTTClient_publish: cmake_check_build_system
 MQTTClient_publish/fast:
 	$(MAKE) -f CMakeFiles/MQTTClient_publish.dir/build.make CMakeFiles/MQTTClient_publish.dir/build
 .PHONY : MQTTClient_publish/fast
+
+#=============================================================================
+# Target rules for targets named test_ccmqtt
+
+# Build rule for target.
+test_ccmqtt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_ccmqtt
+.PHONY : test_ccmqtt
+
+# fast build rule for target.
+test_ccmqtt/fast:
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/build
+.PHONY : test_ccmqtt/fast
 
 #=============================================================================
 # Target rules for targets named MQTTClient_subscribe
@@ -203,32 +216,59 @@ src/MQTTClient_subscribe.c.s:
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/src/MQTTClient_subscribe.c.s
 .PHONY : src/MQTTClient_subscribe.c.s
 
-src/test_client.o: src/test_client.cpp.o
+src/test_ccmqtt.o: src/test_ccmqtt.cpp.o
 
-.PHONY : src/test_client.o
+.PHONY : src/test_ccmqtt.o
 
 # target to build an object file
-src/test_client.cpp.o:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/src/test_client.cpp.o
-.PHONY : src/test_client.cpp.o
+src/test_ccmqtt.cpp.o:
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/src/test_ccmqtt.cpp.o
+.PHONY : src/test_ccmqtt.cpp.o
 
-src/test_client.i: src/test_client.cpp.i
+src/test_ccmqtt.i: src/test_ccmqtt.cpp.i
 
-.PHONY : src/test_client.i
+.PHONY : src/test_ccmqtt.i
 
 # target to preprocess a source file
-src/test_client.cpp.i:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/src/test_client.cpp.i
-.PHONY : src/test_client.cpp.i
+src/test_ccmqtt.cpp.i:
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/src/test_ccmqtt.cpp.i
+.PHONY : src/test_ccmqtt.cpp.i
 
-src/test_client.s: src/test_client.cpp.s
+src/test_ccmqtt.s: src/test_ccmqtt.cpp.s
 
-.PHONY : src/test_client.s
+.PHONY : src/test_ccmqtt.s
 
 # target to generate assembly for a file
-src/test_client.cpp.s:
-	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/src/test_client.cpp.s
-.PHONY : src/test_client.cpp.s
+src/test_ccmqtt.cpp.s:
+	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/src/test_ccmqtt.cpp.s
+.PHONY : src/test_ccmqtt.cpp.s
+
+src/test_cmqtt.o: src/test_cmqtt.cpp.o
+
+.PHONY : src/test_cmqtt.o
+
+# target to build an object file
+src/test_cmqtt.cpp.o:
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/src/test_cmqtt.cpp.o
+.PHONY : src/test_cmqtt.cpp.o
+
+src/test_cmqtt.i: src/test_cmqtt.cpp.i
+
+.PHONY : src/test_cmqtt.i
+
+# target to preprocess a source file
+src/test_cmqtt.cpp.i:
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/src/test_cmqtt.cpp.i
+.PHONY : src/test_cmqtt.cpp.i
+
+src/test_cmqtt.s: src/test_cmqtt.cpp.s
+
+.PHONY : src/test_cmqtt.s
+
+# target to generate assembly for a file
+src/test_cmqtt.cpp.s:
+	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/src/test_cmqtt.cpp.s
+.PHONY : src/test_cmqtt.cpp.s
 
 # Help Target
 help:
@@ -237,9 +277,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... test_client"
+	@echo "... test_cmqtt"
 	@echo "... rebuild_cache"
 	@echo "... MQTTClient_publish"
+	@echo "... test_ccmqtt"
 	@echo "... MQTTClient_subscribe"
 	@echo "... src/MQTTClient_publish.o"
 	@echo "... src/MQTTClient_publish.i"
@@ -247,9 +288,12 @@ help:
 	@echo "... src/MQTTClient_subscribe.o"
 	@echo "... src/MQTTClient_subscribe.i"
 	@echo "... src/MQTTClient_subscribe.s"
-	@echo "... src/test_client.o"
-	@echo "... src/test_client.i"
-	@echo "... src/test_client.s"
+	@echo "... src/test_ccmqtt.o"
+	@echo "... src/test_ccmqtt.i"
+	@echo "... src/test_ccmqtt.s"
+	@echo "... src/test_cmqtt.o"
+	@echo "... src/test_cmqtt.i"
+	@echo "... src/test_cmqtt.s"
 .PHONY : help
 
 

@@ -1,6 +1,6 @@
-#include "cmqtt.hpp"
-
-int main()
+#include "ccmqtt.h"
+#include <thread>
+int main(int argc, char *argv[])
 {
     cmqttParam param;
     param.address = "tcp://localhost:1883";
@@ -9,10 +9,8 @@ int main()
     param.clientId = "ExampleClientSub";
     param.qos = 1;
     param.timeout = 10000;
-    Cmqtt mqtt(param);
-    mqtt.mqttInit();
-
-    mqtt.mqttPublish(param.topic, param.payload);
-    char ch = getchar();
+    // std::thread t(mqttSub, param);
+    std::thread t(pub);
+    t.join();
     return 0;
 }

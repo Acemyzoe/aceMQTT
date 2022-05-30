@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ccmqtt.h
+stdio.h
+-
+stdlib.h
+-
+string
+-
+MQTTClient.h
+../include/MQTTClient.h
+cstring
+-
+
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_ccmqtt.cpp
+ccmqtt.h
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/ccmqtt.h
+thread
+-
+

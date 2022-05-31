@@ -57,45 +57,45 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/mqtt_lib_test/main.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/mqtt_lib_test/main.c.o: ../mqtt_lib_test/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/mqtt_lib_test/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/mqtt_lib_test/main.c.o   -c /home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib_test/main.c
+CMakeFiles/main.dir/test/main.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/test/main.cpp.o: ../test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/test/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/test/main.cpp.o -c /home/ace/文档/aceMQTT/client/libmqtt/test/main.cpp
 
-CMakeFiles/main.dir/mqtt_lib_test/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/mqtt_lib_test/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib_test/main.c > CMakeFiles/main.dir/mqtt_lib_test/main.c.i
+CMakeFiles/main.dir/test/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/test/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ace/文档/aceMQTT/client/libmqtt/test/main.cpp > CMakeFiles/main.dir/test/main.cpp.i
 
-CMakeFiles/main.dir/mqtt_lib_test/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/mqtt_lib_test/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib_test/main.c -o CMakeFiles/main.dir/mqtt_lib_test/main.c.s
+CMakeFiles/main.dir/test/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/test/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/test/main.cpp -o CMakeFiles/main.dir/test/main.cpp.s
 
-CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o: ../mqtt_lib/lib_mqtt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o   -c /home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib/lib_mqtt.c
+CMakeFiles/main.dir/include/lib_mqtt.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/include/lib_mqtt.c.o: ../include/lib_mqtt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/include/lib_mqtt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/include/lib_mqtt.c.o   -c /home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c
 
-CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib/lib_mqtt.c > CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.i
+CMakeFiles/main.dir/include/lib_mqtt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/include/lib_mqtt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c > CMakeFiles/main.dir/include/lib_mqtt.c.i
 
-CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib/lib_mqtt.c -o CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.s
+CMakeFiles/main.dir/include/lib_mqtt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/include/lib_mqtt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c -o CMakeFiles/main.dir/include/lib_mqtt.c.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/mqtt_lib_test/main.c.o" \
-"CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o"
+"CMakeFiles/main.dir/test/main.cpp.o" \
+"CMakeFiles/main.dir/include/lib_mqtt.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main: CMakeFiles/main.dir/mqtt_lib_test/main.c.o
-main: CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o
+main: CMakeFiles/main.dir/test/main.cpp.o
+main: CMakeFiles/main.dir/include/lib_mqtt.c.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

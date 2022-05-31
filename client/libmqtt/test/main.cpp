@@ -4,9 +4,11 @@
 #include "lib_mqtt.h"
 #include <sys/time.h>
 #include <time.h>
+#include <iostream>
 void recive_msg_callback(char *topic, char *msg, int msglen)
 {
-	printf("get topic:%s\n msg:%s\n msglen:%d\n", topic, msg, msglen);
+	std::cout << "topic:" << topic << std::endl;
+	std::cout << " msg:" << msg << std::endl;
 }
 
 int main()

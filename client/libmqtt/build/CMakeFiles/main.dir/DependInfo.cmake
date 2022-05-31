@@ -1,18 +1,26 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "C"
+  "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib/lib_mqtt.c" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o"
-  "/home/ace/文档/aceMQTT/client/libmqtt/mqtt_lib_test/main.c" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir/mqtt_lib_test/main.c.o"
+  "/home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir/include/lib_mqtt.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../mqtt_lib_test"
-  "../mqtt_lib"
+  "../include"
+  )
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ace/文档/aceMQTT/client/libmqtt/test/main.cpp" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir/test/main.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../include"
   )
 
 # Targets to which this target links.

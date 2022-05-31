@@ -123,59 +123,59 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-mqtt_lib/lib_mqtt.o: mqtt_lib/lib_mqtt.c.o
+include/lib_mqtt.o: include/lib_mqtt.c.o
 
-.PHONY : mqtt_lib/lib_mqtt.o
-
-# target to build an object file
-mqtt_lib/lib_mqtt.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.o
-.PHONY : mqtt_lib/lib_mqtt.c.o
-
-mqtt_lib/lib_mqtt.i: mqtt_lib/lib_mqtt.c.i
-
-.PHONY : mqtt_lib/lib_mqtt.i
-
-# target to preprocess a source file
-mqtt_lib/lib_mqtt.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.i
-.PHONY : mqtt_lib/lib_mqtt.c.i
-
-mqtt_lib/lib_mqtt.s: mqtt_lib/lib_mqtt.c.s
-
-.PHONY : mqtt_lib/lib_mqtt.s
-
-# target to generate assembly for a file
-mqtt_lib/lib_mqtt.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mqtt_lib/lib_mqtt.c.s
-.PHONY : mqtt_lib/lib_mqtt.c.s
-
-mqtt_lib_test/main.o: mqtt_lib_test/main.c.o
-
-.PHONY : mqtt_lib_test/main.o
+.PHONY : include/lib_mqtt.o
 
 # target to build an object file
-mqtt_lib_test/main.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mqtt_lib_test/main.c.o
-.PHONY : mqtt_lib_test/main.c.o
+include/lib_mqtt.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/lib_mqtt.c.o
+.PHONY : include/lib_mqtt.c.o
 
-mqtt_lib_test/main.i: mqtt_lib_test/main.c.i
+include/lib_mqtt.i: include/lib_mqtt.c.i
 
-.PHONY : mqtt_lib_test/main.i
+.PHONY : include/lib_mqtt.i
 
 # target to preprocess a source file
-mqtt_lib_test/main.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mqtt_lib_test/main.c.i
-.PHONY : mqtt_lib_test/main.c.i
+include/lib_mqtt.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/lib_mqtt.c.i
+.PHONY : include/lib_mqtt.c.i
 
-mqtt_lib_test/main.s: mqtt_lib_test/main.c.s
+include/lib_mqtt.s: include/lib_mqtt.c.s
 
-.PHONY : mqtt_lib_test/main.s
+.PHONY : include/lib_mqtt.s
 
 # target to generate assembly for a file
-mqtt_lib_test/main.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mqtt_lib_test/main.c.s
-.PHONY : mqtt_lib_test/main.c.s
+include/lib_mqtt.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/lib_mqtt.c.s
+.PHONY : include/lib_mqtt.c.s
+
+test/main.o: test/main.cpp.o
+
+.PHONY : test/main.o
+
+# target to build an object file
+test/main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test/main.cpp.o
+.PHONY : test/main.cpp.o
+
+test/main.i: test/main.cpp.i
+
+.PHONY : test/main.i
+
+# target to preprocess a source file
+test/main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test/main.cpp.i
+.PHONY : test/main.cpp.i
+
+test/main.s: test/main.cpp.s
+
+.PHONY : test/main.s
+
+# target to generate assembly for a file
+test/main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test/main.cpp.s
+.PHONY : test/main.cpp.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... mqtt_lib/lib_mqtt.o"
-	@echo "... mqtt_lib/lib_mqtt.i"
-	@echo "... mqtt_lib/lib_mqtt.s"
-	@echo "... mqtt_lib_test/main.o"
-	@echo "... mqtt_lib_test/main.i"
-	@echo "... mqtt_lib_test/main.s"
+	@echo "... include/lib_mqtt.o"
+	@echo "... include/lib_mqtt.i"
+	@echo "... include/lib_mqtt.s"
+	@echo "... test/main.o"
+	@echo "... test/main.i"
+	@echo "... test/main.s"
 .PHONY : help
 
 

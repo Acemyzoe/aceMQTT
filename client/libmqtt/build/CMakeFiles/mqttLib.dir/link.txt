@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmqttLib.a  CMakeFiles/mqttLib.dir/include/mqttLib.c.o
+/usr/bin/ranlib libmqttLib.a

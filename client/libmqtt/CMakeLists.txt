@@ -17,7 +17,7 @@ option(EXAMPLES "Build examples?" ON)
 if(EXAMPLES)
     find_package(Threads REQUIRED)
 
-    add_library(libmqtt
+    add_library(mqttLib
     STATIC 
     ${PROJECT_SOURCE_DIR}/include/mqttLib.c
     ${PROJECT_SOURCE_DIR}/include/mqttLib.h
@@ -26,7 +26,7 @@ if(EXAMPLES)
     add_executable(test_pub_sub test/test_pub_sub.cpp include/mqttLib.c)
     target_link_libraries(test_pub_sub Threads::Threads paho-mqtt3c)
 
-    add_executable(test_thread test/test_thread.cpp include/mqttLib.c)
-    target_link_libraries(test_thread Threads::Threads paho-mqtt3c)
+    add_executable(test_thread test/test_thread.cpp)
+    target_link_libraries(test_thread mqttLib Threads::Threads paho-mqtt3c)
 
 endif()

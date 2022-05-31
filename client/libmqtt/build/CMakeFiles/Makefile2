@@ -55,7 +55,7 @@ CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/libmqtt/build
 # The main recursive "all" target.
 all: CMakeFiles/test_thread.dir/all
 all: CMakeFiles/test_pub_sub.dir/all
-all: CMakeFiles/libmqtt.dir/all
+all: CMakeFiles/mqttLib.dir/all
 
 .PHONY : all
 
@@ -67,7 +67,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/test_thread.dir/clean
 clean: CMakeFiles/test_pub_sub.dir/clean
-clean: CMakeFiles/libmqtt.dir/clean
+clean: CMakeFiles/mqttLib.dir/clean
 
 .PHONY : clean
 
@@ -75,15 +75,15 @@ clean: CMakeFiles/libmqtt.dir/clean
 # Target rules for target CMakeFiles/test_thread.dir
 
 # All Build rule for target.
-CMakeFiles/test_thread.dir/all:
+CMakeFiles/test_thread.dir/all: CMakeFiles/mqttLib.dir/all
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=6,7,8 "Built target test_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=6,7 "Built target test_thread"
 .PHONY : CMakeFiles/test_thread.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_thread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_thread.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_thread.dir/rule
@@ -126,31 +126,31 @@ CMakeFiles/test_pub_sub.dir/clean:
 .PHONY : CMakeFiles/test_pub_sub.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/libmqtt.dir
+# Target rules for target CMakeFiles/mqttLib.dir
 
 # All Build rule for target.
-CMakeFiles/libmqtt.dir/all:
-	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/depend
-	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=1,2 "Built target libmqtt"
-.PHONY : CMakeFiles/libmqtt.dir/all
+CMakeFiles/mqttLib.dir/all:
+	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/depend
+	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=1,2 "Built target mqttLib"
+.PHONY : CMakeFiles/mqttLib.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/libmqtt.dir/rule: cmake_check_build_system
+CMakeFiles/mqttLib.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/libmqtt.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mqttLib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 0
-.PHONY : CMakeFiles/libmqtt.dir/rule
+.PHONY : CMakeFiles/mqttLib.dir/rule
 
 # Convenience name for target.
-libmqtt: CMakeFiles/libmqtt.dir/rule
+mqttLib: CMakeFiles/mqttLib.dir/rule
 
-.PHONY : libmqtt
+.PHONY : mqttLib
 
 # clean rule for target.
-CMakeFiles/libmqtt.dir/clean:
-	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/clean
-.PHONY : CMakeFiles/libmqtt.dir/clean
+CMakeFiles/mqttLib.dir/clean:
+	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/clean
+.PHONY : CMakeFiles/mqttLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

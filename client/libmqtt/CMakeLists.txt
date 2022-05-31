@@ -17,7 +17,10 @@ option(EXAMPLES "Build examples?" ON)
 if(EXAMPLES)
     find_package(Threads REQUIRED)
 
-    add_executable(main test/main.cpp include/lib_mqtt.c)
-    target_link_libraries(main Threads::Threads paho-mqtt3c)
+    add_executable(test_pub_sub test/test_pub_sub.cpp include/lib_mqtt.c)
+    target_link_libraries(test_pub_sub Threads::Threads paho-mqtt3c)
+
+    add_executable(test_thread test/test_thread.cpp include/lib_mqtt.c)
+    target_link_libraries(test_thread Threads::Threads paho-mqtt3c)
 
 endif()

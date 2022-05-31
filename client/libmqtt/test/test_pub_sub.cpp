@@ -2,13 +2,12 @@
 #include <unistd.h>
 #include <string.h>
 #include "lib_mqtt.h"
-#include <sys/time.h>
-#include <time.h>
+#include <ctime>
 #include <iostream>
 void recive_msg_callback(char *topic, char *msg, int msglen)
 {
 	std::cout << "topic:" << topic << std::endl;
-	std::cout << " msg:" << msg << std::endl;
+	std::cout << "msg:" << msg << std::endl;
 }
 
 int main()
@@ -34,13 +33,10 @@ int main()
 
 	while (1)
 	{
-		time(&tt);
-		t = localtime(&tt);
-		sprintf(&timebuf[0], "%04d-%02d-%02d %02d:%02d:%02d ",
-				t->tm_year + 1900, t->tm_mon + 1, t->tm_mday,
-				t->tm_hour, t->tm_min, t->tm_sec);
+		time_t now = time(0);
+		char *dt = ctime(&now);
 
-		ret = mqtt_publish(handle, "testing", timebuf, strlen(timebuf), ONECE_LATEST);
+		ret = mqtt_publish(handle, "testing", dt, strlen(dt), ONECE_LATEST);
 
 		if (ret < 0)
 		{

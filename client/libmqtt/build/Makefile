@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named test_thread
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named test_pub_sub
+
+# Build rule for target.
+test_pub_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_pub_sub
+.PHONY : test_pub_sub
+
+# fast build rule for target.
+test_pub_sub/fast:
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/build
+.PHONY : test_pub_sub/fast
 
 include/lib_mqtt.o: include/lib_mqtt.c.o
 
@@ -129,7 +142,8 @@ include/lib_mqtt.o: include/lib_mqtt.c.o
 
 # target to build an object file
 include/lib_mqtt.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/lib_mqtt.c.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/lib_mqtt.c.o
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o
 .PHONY : include/lib_mqtt.c.o
 
 include/lib_mqtt.i: include/lib_mqtt.c.i
@@ -138,7 +152,8 @@ include/lib_mqtt.i: include/lib_mqtt.c.i
 
 # target to preprocess a source file
 include/lib_mqtt.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/lib_mqtt.c.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/lib_mqtt.c.i
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.i
 .PHONY : include/lib_mqtt.c.i
 
 include/lib_mqtt.s: include/lib_mqtt.c.s
@@ -147,35 +162,63 @@ include/lib_mqtt.s: include/lib_mqtt.c.s
 
 # target to generate assembly for a file
 include/lib_mqtt.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/lib_mqtt.c.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/lib_mqtt.c.s
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.s
 .PHONY : include/lib_mqtt.c.s
 
-test/main.o: test/main.cpp.o
+test/test_pub_sub.o: test/test_pub_sub.cpp.o
 
-.PHONY : test/main.o
+.PHONY : test/test_pub_sub.o
 
 # target to build an object file
-test/main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test/main.cpp.o
-.PHONY : test/main.cpp.o
+test/test_pub_sub.cpp.o:
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.o
+.PHONY : test/test_pub_sub.cpp.o
 
-test/main.i: test/main.cpp.i
+test/test_pub_sub.i: test/test_pub_sub.cpp.i
 
-.PHONY : test/main.i
+.PHONY : test/test_pub_sub.i
 
 # target to preprocess a source file
-test/main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test/main.cpp.i
-.PHONY : test/main.cpp.i
+test/test_pub_sub.cpp.i:
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.i
+.PHONY : test/test_pub_sub.cpp.i
 
-test/main.s: test/main.cpp.s
+test/test_pub_sub.s: test/test_pub_sub.cpp.s
 
-.PHONY : test/main.s
+.PHONY : test/test_pub_sub.s
 
 # target to generate assembly for a file
-test/main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test/main.cpp.s
-.PHONY : test/main.cpp.s
+test/test_pub_sub.cpp.s:
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.s
+.PHONY : test/test_pub_sub.cpp.s
+
+test/test_thread.o: test/test_thread.cpp.o
+
+.PHONY : test/test_thread.o
+
+# target to build an object file
+test/test_thread.cpp.o:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.o
+.PHONY : test/test_thread.cpp.o
+
+test/test_thread.i: test/test_thread.cpp.i
+
+.PHONY : test/test_thread.i
+
+# target to preprocess a source file
+test/test_thread.cpp.i:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.i
+.PHONY : test/test_thread.cpp.i
+
+test/test_thread.s: test/test_thread.cpp.s
+
+.PHONY : test/test_thread.s
+
+# target to generate assembly for a file
+test/test_thread.cpp.s:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.s
+.PHONY : test/test_thread.cpp.s
 
 # Help Target
 help:
@@ -185,13 +228,17 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
+	@echo "... test_thread"
+	@echo "... test_pub_sub"
 	@echo "... include/lib_mqtt.o"
 	@echo "... include/lib_mqtt.i"
 	@echo "... include/lib_mqtt.s"
-	@echo "... test/main.o"
-	@echo "... test/main.i"
-	@echo "... test/main.s"
+	@echo "... test/test_pub_sub.o"
+	@echo "... test/test_pub_sub.i"
+	@echo "... test/test_pub_sub.s"
+	@echo "... test/test_thread.o"
+	@echo "... test/test_thread.i"
+	@echo "... test/test_thread.s"
 .PHONY : help
 
 

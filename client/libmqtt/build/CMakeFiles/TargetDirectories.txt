@@ -1,3 +1,4 @@
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/rebuild_cache.dir
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/edit_cache.dir
-/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir
+/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_thread.dir
+/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_pub_sub.dir

@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir/include/lib_mqtt.c.o"
+  "/home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_thread.dir/include/lib_mqtt.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -14,7 +14,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ace/文档/aceMQTT/client/libmqtt/test/main.cpp" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/main.dir/test/main.cpp.o"
+  "/home/ace/文档/aceMQTT/client/libmqtt/test/test_thread.cpp" "/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_thread.dir/test/test_thread.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

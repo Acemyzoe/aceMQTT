@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.o CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o  -o test_pub_sub   -L/home/ace/文档/aceMQTT/client/libmqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/libmqtt/lib -lpaho-mqtt3c -lpthread 

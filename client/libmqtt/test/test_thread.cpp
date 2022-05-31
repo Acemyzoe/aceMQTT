@@ -15,11 +15,11 @@ void recive_msg_callback(char *topic, char *msg, int msglen)
 int main()
 {
     MQTT_HANDLE handle;
-    handle = mqtt_init("12345", "localhost:1883", NULL, NULL, (MSG_RECIVE_CALLBACL)recive_msg_callback);
+    handle = mqtt_init((char *)"12345", (char *)"localhost:1883", NULL, NULL, (MSG_RECIVE_CALLBACL)recive_msg_callback);
     std::thread sub([&handle]()
                     {
         int ret = 0;
-        ret = mqtt_subscribe(handle, "testing", ONECE_LATEST);
+        ret = mqtt_subscribe(handle, (char *)"testing", ONECE_LATEST);
         if (ret < 0)
         {
             printf("subscribe error\n");
@@ -32,7 +32,7 @@ int main()
         {
             time_t now = time(0);
             char* dt = ctime(&now);
-            ret = mqtt_publish(handle, "testing", dt, strlen(dt), ONECE_LATEST);
+            ret = mqtt_publish(handle, (char *)"testing", dt, strlen(dt), ONECE_LATEST);
 
             if (ret < 0)
             {

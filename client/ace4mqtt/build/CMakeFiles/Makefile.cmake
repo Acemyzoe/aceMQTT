@@ -52,6 +52,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_cmqtt.dir/DependInfo.cmake"
+  "CMakeFiles/MQTTAsync_publish.dir/DependInfo.cmake"
+  "CMakeFiles/MQTTAsync_subscribe.dir/DependInfo.cmake"
   "CMakeFiles/MQTTClient_publish.dir/DependInfo.cmake"
   "CMakeFiles/test_ccmqtt.dir/DependInfo.cmake"
   "CMakeFiles/MQTTClient_subscribe.dir/DependInfo.cmake"

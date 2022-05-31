@@ -124,6 +124,32 @@ test_cmqtt/fast:
 .PHONY : test_cmqtt/fast
 
 #=============================================================================
+# Target rules for targets named MQTTAsync_publish
+
+# Build rule for target.
+MQTTAsync_publish: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MQTTAsync_publish
+.PHONY : MQTTAsync_publish
+
+# fast build rule for target.
+MQTTAsync_publish/fast:
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/build
+.PHONY : MQTTAsync_publish/fast
+
+#=============================================================================
+# Target rules for targets named MQTTAsync_subscribe
+
+# Build rule for target.
+MQTTAsync_subscribe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MQTTAsync_subscribe
+.PHONY : MQTTAsync_subscribe
+
+# fast build rule for target.
+MQTTAsync_subscribe/fast:
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/build
+.PHONY : MQTTAsync_subscribe/fast
+
+#=============================================================================
 # Target rules for targets named MQTTClient_publish
 
 # Build rule for target.
@@ -161,6 +187,60 @@ MQTTClient_subscribe: cmake_check_build_system
 MQTTClient_subscribe/fast:
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/build
 .PHONY : MQTTClient_subscribe/fast
+
+src/MQTTAsync_publish.o: src/MQTTAsync_publish.c.o
+
+.PHONY : src/MQTTAsync_publish.o
+
+# target to build an object file
+src/MQTTAsync_publish.c.o:
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/src/MQTTAsync_publish.c.o
+.PHONY : src/MQTTAsync_publish.c.o
+
+src/MQTTAsync_publish.i: src/MQTTAsync_publish.c.i
+
+.PHONY : src/MQTTAsync_publish.i
+
+# target to preprocess a source file
+src/MQTTAsync_publish.c.i:
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/src/MQTTAsync_publish.c.i
+.PHONY : src/MQTTAsync_publish.c.i
+
+src/MQTTAsync_publish.s: src/MQTTAsync_publish.c.s
+
+.PHONY : src/MQTTAsync_publish.s
+
+# target to generate assembly for a file
+src/MQTTAsync_publish.c.s:
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/src/MQTTAsync_publish.c.s
+.PHONY : src/MQTTAsync_publish.c.s
+
+src/MQTTAsync_subscribe.o: src/MQTTAsync_subscribe.c.o
+
+.PHONY : src/MQTTAsync_subscribe.o
+
+# target to build an object file
+src/MQTTAsync_subscribe.c.o:
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/src/MQTTAsync_subscribe.c.o
+.PHONY : src/MQTTAsync_subscribe.c.o
+
+src/MQTTAsync_subscribe.i: src/MQTTAsync_subscribe.c.i
+
+.PHONY : src/MQTTAsync_subscribe.i
+
+# target to preprocess a source file
+src/MQTTAsync_subscribe.c.i:
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/src/MQTTAsync_subscribe.c.i
+.PHONY : src/MQTTAsync_subscribe.c.i
+
+src/MQTTAsync_subscribe.s: src/MQTTAsync_subscribe.c.s
+
+.PHONY : src/MQTTAsync_subscribe.s
+
+# target to generate assembly for a file
+src/MQTTAsync_subscribe.c.s:
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/src/MQTTAsync_subscribe.c.s
+.PHONY : src/MQTTAsync_subscribe.c.s
 
 src/MQTTClient_publish.o: src/MQTTClient_publish.c.o
 
@@ -278,10 +358,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... test_cmqtt"
+	@echo "... MQTTAsync_publish"
+	@echo "... MQTTAsync_subscribe"
 	@echo "... rebuild_cache"
 	@echo "... MQTTClient_publish"
 	@echo "... test_ccmqtt"
 	@echo "... MQTTClient_subscribe"
+	@echo "... src/MQTTAsync_publish.o"
+	@echo "... src/MQTTAsync_publish.i"
+	@echo "... src/MQTTAsync_publish.s"
+	@echo "... src/MQTTAsync_subscribe.o"
+	@echo "... src/MQTTAsync_subscribe.i"
+	@echo "... src/MQTTAsync_subscribe.s"
 	@echo "... src/MQTTClient_publish.o"
 	@echo "... src/MQTTClient_publish.i"
 	@echo "... src/MQTTClient_publish.s"

@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/ace4mqtt/build
 
 # The main recursive "all" target.
 all: CMakeFiles/test_cmqtt.dir/all
+all: CMakeFiles/MQTTAsync_publish.dir/all
+all: CMakeFiles/MQTTAsync_subscribe.dir/all
 all: CMakeFiles/MQTTClient_publish.dir/all
 all: CMakeFiles/test_ccmqtt.dir/all
 all: CMakeFiles/MQTTClient_subscribe.dir/all
@@ -67,6 +69,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test_cmqtt.dir/clean
+clean: CMakeFiles/MQTTAsync_publish.dir/clean
+clean: CMakeFiles/MQTTAsync_subscribe.dir/clean
 clean: CMakeFiles/MQTTClient_publish.dir/clean
 clean: CMakeFiles/test_ccmqtt.dir/clean
 clean: CMakeFiles/MQTTClient_subscribe.dir/clean
@@ -80,7 +84,7 @@ clean: CMakeFiles/MQTTClient_subscribe.dir/clean
 CMakeFiles/test_cmqtt.dir/all:
 	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/depend
 	$(MAKE) -f CMakeFiles/test_cmqtt.dir/build.make CMakeFiles/test_cmqtt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=7,8 "Built target test_cmqtt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=11,12 "Built target test_cmqtt"
 .PHONY : CMakeFiles/test_cmqtt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -101,13 +105,67 @@ CMakeFiles/test_cmqtt.dir/clean:
 .PHONY : CMakeFiles/test_cmqtt.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/MQTTAsync_publish.dir
+
+# All Build rule for target.
+CMakeFiles/MQTTAsync_publish.dir/all:
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/depend
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=1,2 "Built target MQTTAsync_publish"
+.PHONY : CMakeFiles/MQTTAsync_publish.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MQTTAsync_publish.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MQTTAsync_publish.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 0
+.PHONY : CMakeFiles/MQTTAsync_publish.dir/rule
+
+# Convenience name for target.
+MQTTAsync_publish: CMakeFiles/MQTTAsync_publish.dir/rule
+
+.PHONY : MQTTAsync_publish
+
+# clean rule for target.
+CMakeFiles/MQTTAsync_publish.dir/clean:
+	$(MAKE) -f CMakeFiles/MQTTAsync_publish.dir/build.make CMakeFiles/MQTTAsync_publish.dir/clean
+.PHONY : CMakeFiles/MQTTAsync_publish.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MQTTAsync_subscribe.dir
+
+# All Build rule for target.
+CMakeFiles/MQTTAsync_subscribe.dir/all:
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/depend
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=3,4 "Built target MQTTAsync_subscribe"
+.PHONY : CMakeFiles/MQTTAsync_subscribe.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MQTTAsync_subscribe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MQTTAsync_subscribe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles 0
+.PHONY : CMakeFiles/MQTTAsync_subscribe.dir/rule
+
+# Convenience name for target.
+MQTTAsync_subscribe: CMakeFiles/MQTTAsync_subscribe.dir/rule
+
+.PHONY : MQTTAsync_subscribe
+
+# clean rule for target.
+CMakeFiles/MQTTAsync_subscribe.dir/clean:
+	$(MAKE) -f CMakeFiles/MQTTAsync_subscribe.dir/build.make CMakeFiles/MQTTAsync_subscribe.dir/clean
+.PHONY : CMakeFiles/MQTTAsync_subscribe.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/MQTTClient_publish.dir
 
 # All Build rule for target.
 CMakeFiles/MQTTClient_publish.dir/all:
 	$(MAKE) -f CMakeFiles/MQTTClient_publish.dir/build.make CMakeFiles/MQTTClient_publish.dir/depend
 	$(MAKE) -f CMakeFiles/MQTTClient_publish.dir/build.make CMakeFiles/MQTTClient_publish.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=1,2 "Built target MQTTClient_publish"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=5,6 "Built target MQTTClient_publish"
 .PHONY : CMakeFiles/MQTTClient_publish.dir/all
 
 # Build rule for subdir invocation for target.
@@ -134,7 +192,7 @@ CMakeFiles/MQTTClient_publish.dir/clean:
 CMakeFiles/test_ccmqtt.dir/all:
 	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/depend
 	$(MAKE) -f CMakeFiles/test_ccmqtt.dir/build.make CMakeFiles/test_ccmqtt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=5,6 "Built target test_ccmqtt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=9,10 "Built target test_ccmqtt"
 .PHONY : CMakeFiles/test_ccmqtt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -161,7 +219,7 @@ CMakeFiles/test_ccmqtt.dir/clean:
 CMakeFiles/MQTTClient_subscribe.dir/all:
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/depend
 	$(MAKE) -f CMakeFiles/MQTTClient_subscribe.dir/build.make CMakeFiles/MQTTClient_subscribe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=3,4 "Built target MQTTClient_subscribe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles --progress-num=7,8 "Built target MQTTClient_subscribe"
 .PHONY : CMakeFiles/MQTTClient_subscribe.dir/all
 
 # Build rule for subdir invocation for target.

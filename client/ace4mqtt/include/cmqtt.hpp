@@ -1,6 +1,8 @@
 #pragma once
 #include "MQTTAsync.h"
 #include <string>
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 #include <string>
 #include <functional>
@@ -8,7 +10,7 @@
 #include <thread>
 #include <mutex>
 #include <string.h>
-#include <iostream>
+#include <unistd.h>
 static const char *MQTT_ADDRESS = "tcp://loaclhost:1883";
 static const char *MQTT_CLIENT_ID = "ace4mqtt";
 static const int MQTT_QOS = 1;
@@ -27,7 +29,7 @@ typedef struct cmqttParam
 class Cmqtt
 {
 public:
-    Cmqtt(cmqttParam &param);
+    Cmqtt(cmqttParam param);
     ~Cmqtt();
     int mqttInit();
     int mqttPublish(std::string topic, std::string message);
@@ -38,88 +40,160 @@ private:
     MQTTAsync_connectOptions m_connect_options;
     MQTTAsync_message m_message;
     MQTTAsync_token m_token;
-    cmqttParam m_param;
+    static cmqttParam m_param;
+    static int finished;
 
-    static void mqtt_connection_lost(void *context, char *cause);
-    static int mqtt_message_arrived(void *context, char *topicName, int topicLen, MQTTAsync_message *message);
-    static void mqtt_on_connect(void *context, MQTTAsync_successData *response);
-    static void mqtt_on_connect_fail(void *context, MQTTAsync_failureData *response);
+    static void connlost(void *context, char *cause);
+    static void onDisconnectFailure(void *context, MQTTAsync_failureData *response);
+    static void onDisconnect(void *context, MQTTAsync_successData *response);
+    static void onSendFailure(void *context, MQTTAsync_failureData *response);
+    static void onSend(void *context, MQTTAsync_successData *response);
+    static void onConnectFailure(void *context, MQTTAsync_failureData *response);
+    static void onConnect(void *context, MQTTAsync_successData *response);
+    static int messageArrived(void *context, char *topicName, int topicLen, MQTTAsync_message *message);
 };
 
-Cmqtt::Cmqtt(cmqttParam &param)
+Cmqtt::Cmqtt(cmqttParam param)
 {
     m_param = param;
 }
 
 Cmqtt::~Cmqtt()
 {
-    MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
-    MQTTAsync_disconnect(m_client, &opts);
     MQTTAsync_destroy(&m_client);
 }
-int Cmqtt::mqttInit()
-{
-    MQTTAsync_create(&m_client, m_param.address.c_str(), m_param.clientId.c_str(), MQTTCLIENT_PERSISTENCE_NONE, NULL);
-    MQTTAsync_setCallbacks(m_client, this, mqtt_connection_lost, mqtt_message_arrived, NULL);
 
-    MQTTAsync_connectOptions opts = MQTTAsync_connectOptions_initializer;
-    opts.keepAliveInterval = 20;
-    opts.cleansession = 1;
-    opts.onSuccess = mqtt_on_connect;
-    opts.onFailure = mqtt_on_connect_fail;
-    opts.context = this;
-    opts.connectTimeout = m_param.timeout;
-    opts.username = m_param.clientId.c_str();
-    opts.password = m_param.clientId.c_str();
-    opts.MQTTVersion = MQTTVERSION_3_1_1;
-    opts.automaticReconnect = 1;
-    opts.retryInterval = 1;
-    opts.connectTimeout = m_param.timeout;
-    int time = 1;
-    while (MQTTAsync_connect(m_client, &opts) != MQTTASYNC_SUCCESS)
+void Cmqtt::connlost(void *context, char *cause)
+{
+    MQTTAsync client = (MQTTAsync)context;
+    MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;
+    int rc;
+
+    printf("\nConnection lost\n");
+    printf("     cause: %s\n", cause);
+
+    printf("Reconnecting\n");
+    conn_opts.keepAliveInterval = 20;
+    conn_opts.cleansession = 1;
+    if ((rc = MQTTAsync_connect(client, &conn_opts)) != MQTTASYNC_SUCCESS)
     {
-        std::cout << "Failed to connect, retrying in " << time << " seconds" << std::endl;
+        printf("Failed to start connect, return code %d\n", rc);
+        finished = 1;
     }
-    return 0;
 }
-void Cmqtt::mqtt_connection_lost(void *context, char *cause)
-{
-    printf("mqtt_connection_lost: %s\n", cause);
-}
-void Cmqtt::mqtt_on_connect(void *context, MQTTAsync_successData *response)
-{
-    printf("mqtt_on_connect\n");
-    // subscribe
-}
-void Cmqtt::mqtt_on_connect_fail(void *context, MQTTAsync_failureData *response)
-{
-    printf("mqtt_on_connect_fail: %s\n", response->message);
-}
-int Cmqtt::mqttPublish(std::string topic, std::string message)
-{
-    MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
-    opts.onSuccess = NULL;
-    opts.onFailure = NULL;
-    opts.context = m_client;
-    opts.token = m_token;
 
+void Cmqtt::onDisconnectFailure(void *context, MQTTAsync_failureData *response)
+{
+    printf("Disconnect failed\n");
+    finished = 1;
+}
+
+void Cmqtt::onDisconnect(void *context, MQTTAsync_successData *response)
+{
+    printf("Disconnect successful\n");
+    finished = 1;
+}
+
+void Cmqtt::onSendFailure(void *context, MQTTAsync_failureData *response)
+{
+    MQTTAsync client = (MQTTAsync)context;
+    MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
+    int rc;
+
+    printf("Message send failed token %d error code %d\n", response->token, response->code);
+    opts.onSuccess = onDisconnect;
+    opts.onFailure = onDisconnectFailure;
+    opts.context = client;
+    if ((rc = MQTTAsync_disconnect(client, &opts)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to start disconnect, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+}
+
+void Cmqtt::onSend(void *context, MQTTAsync_successData *response)
+{
+    MQTTAsync client = (MQTTAsync)context;
+    MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
+    int rc;
+
+    printf("Message with token value %d delivery confirmed\n", response->token);
+    opts.onSuccess = onDisconnect;
+    opts.onFailure = onDisconnectFailure;
+    opts.context = client;
+    if ((rc = MQTTAsync_disconnect(client, &opts)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to start disconnect, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+}
+
+void Cmqtt::onConnectFailure(void *context, MQTTAsync_failureData *response)
+{
+    printf("Connect failed\n");
+    finished = 1;
+}
+
+void Cmqtt::onConnect(void *context, MQTTAsync_successData *response)
+{
+    MQTTAsync client = (MQTTAsync)context;
+    MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
     MQTTAsync_message pubmsg = MQTTAsync_message_initializer;
-    pubmsg.payload = (void *)message.c_str();
-    pubmsg.payloadlen = message.length();
+    int rc;
+
+    printf("Successful connection\n");
+    opts.onSuccess = onSend;
+    opts.onFailure = onSendFailure;
+    opts.context = client;
+    pubmsg.payload = (void *)m_param.payload.c_str();
+    pubmsg.payloadlen = (int)m_param.payload.length();
     pubmsg.qos = m_param.qos;
     pubmsg.retained = 0;
+    if ((rc = MQTTAsync_sendMessage(client, m_param.topic.c_str(), &pubmsg, &opts)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to start sendMessage, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+}
 
-    int r = MQTTAsync_sendMessage(m_client, topic.c_str(), &pubmsg, &opts);
-    printf("mqttPublish: %d\n", r);
+int Cmqtt::messageArrived(void *context, char *topicName, int topicLen, MQTTAsync_message *message)
+{
+    return 1;
+}
+
+int Cmqtt::mqttPublish(std::string topic, std::string message)
+{
+    int rc;
+
+    if ((rc = MQTTAsync_create(&m_client, m_param.address.c_str(), m_param.clientId.c_str(), MQTTCLIENT_PERSISTENCE_NONE, NULL)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to create client object, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+
+    if ((rc = MQTTAsync_setCallbacks(m_client, NULL, connlost, messageArrived, NULL)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to set callback, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+
+    m_connect_options.keepAliveInterval = 20;
+    m_connect_options.cleansession = 1;
+    m_connect_options.onSuccess = onConnect;
+    m_connect_options.onFailure = onConnectFailure;
+    m_connect_options.context = m_client;
+    if ((rc = MQTTAsync_connect(m_client, &m_connect_options)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to start connect, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+    while (!finished)
+    {
+        sleep(100);
+    }
     return 0;
 }
 int Cmqtt::mqttSubscribe(std::string topic)
 {
-    MQTTAsync_subscribe(m_client, topic.c_str(), m_param.qos, NULL);
-    return 0;
-}
-int Cmqtt::mqtt_message_arrived(void *context, char *topicName, int topicLen, MQTTAsync_message *message)
-{
-    std::cout << "mqtt_message_arrived: " << topicName << std::endl;
-    return 0;
+    return 1;
 }

@@ -12,6 +12,7 @@ int test_cmqtt()
     mqtt.mqttInit();
 
     mqtt.mqttPublish(param.topic, param.payload);
+    // mqtt.mqttSubscribe(param.topic);
     char ch = getchar();
     return 0;
 }

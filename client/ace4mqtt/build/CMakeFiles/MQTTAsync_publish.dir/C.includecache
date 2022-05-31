@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/MQTTAsync_publish.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+MQTTAsync.h
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/MQTTAsync.h
+unistd.h
+-
+windows.h
+-
+OsWrapper.h
+-
+

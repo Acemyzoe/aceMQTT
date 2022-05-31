@@ -11,6 +11,10 @@ MQTTAsync.h
 ../include/MQTTAsync.h
 string
 -
+stdio.h
+-
+stdlib.h
+-
 iostream
 -
 string
@@ -25,7 +29,7 @@ mutex
 -
 string.h
 -
-iostream
+unistd.h
 -
 
 /home/ace/文档/aceMQTT/client/ace4mqtt/src/test_cmqtt.cpp

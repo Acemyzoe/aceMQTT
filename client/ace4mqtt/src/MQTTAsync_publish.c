@@ -3,11 +3,11 @@
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
- * and Eclipse Distribution License v1.0 which accompany this distribution. 
+ * and Eclipse Distribution License v1.0 which accompany this distribution.
  *
- * The Eclipse Public License is available at 
+ * The Eclipse Public License is available at
  *   https://www.eclipse.org/legal/epl-2.0/
- * and the Eclipse Distribution License is available at 
+ * and the Eclipse Distribution License is available at
  *   http://www.eclipse.org/org/documents/edl-v10.php.
  *
  * Contributors:
@@ -29,12 +29,12 @@
 #include <OsWrapper.h>
 #endif
 
-#define ADDRESS     "tcp://mqtt.eclipseprojects.io:1883"
-#define CLIENTID    "ExampleClientPub"
-#define TOPIC       "MQTT Examples"
-#define PAYLOAD     "Hello World!"
-#define QOS         1
-#define TIMEOUT     10000L
+#define ADDRESS "tcp://localhost:1883"
+#define CLIENTID "ExampleClientPub"
+#define TOPIC "MQTT Examples"
+#define PAYLOAD "Hello World!"
+#define QOS 1
+#define TIMEOUT 10000L
 
 int finished = 0;
 
@@ -53,23 +53,23 @@ void connlost(void *context, char *cause)
 	if ((rc = MQTTAsync_connect(client, &conn_opts)) != MQTTASYNC_SUCCESS)
 	{
 		printf("Failed to start connect, return code %d\n", rc);
- 		finished = 1;
+		finished = 1;
 	}
 }
 
-void onDisconnectFailure(void* context, MQTTAsync_failureData* response)
+void onDisconnectFailure(void *context, MQTTAsync_failureData *response)
 {
 	printf("Disconnect failed\n");
 	finished = 1;
 }
 
-void onDisconnect(void* context, MQTTAsync_successData* response)
+void onDisconnect(void *context, MQTTAsync_successData *response)
 {
 	printf("Successful disconnection\n");
 	finished = 1;
 }
 
-void onSendFailure(void* context, MQTTAsync_failureData* response)
+void onSendFailure(void *context, MQTTAsync_failureData *response)
 {
 	MQTTAsync client = (MQTTAsync)context;
 	MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
@@ -86,7 +86,7 @@ void onSendFailure(void* context, MQTTAsync_failureData* response)
 	}
 }
 
-void onSend(void* context, MQTTAsync_successData* response)
+void onSend(void *context, MQTTAsync_successData *response)
 {
 	MQTTAsync client = (MQTTAsync)context;
 	MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
@@ -103,15 +103,13 @@ void onSend(void* context, MQTTAsync_successData* response)
 	}
 }
 
-
-void onConnectFailure(void* context, MQTTAsync_failureData* response)
+void onConnectFailure(void *context, MQTTAsync_failureData *response)
 {
 	printf("Connect failed, rc %d\n", response ? response->code : 0);
 	finished = 1;
 }
 
-
-void onConnect(void* context, MQTTAsync_successData* response)
+void onConnect(void *context, MQTTAsync_successData *response)
 {
 	MQTTAsync client = (MQTTAsync)context;
 	MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
@@ -133,13 +131,13 @@ void onConnect(void* context, MQTTAsync_successData* response)
 	}
 }
 
-int messageArrived(void* context, char* topicName, int topicLen, MQTTAsync_message* m)
+int messageArrived(void *context, char *topicName, int topicLen, MQTTAsync_message *m)
 {
 	/* not expecting any messages */
 	return 1;
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	MQTTAsync client;
 	MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;
@@ -169,16 +167,15 @@ int main(int argc, char* argv[])
 	}
 
 	printf("Waiting for publication of %s\n"
-         "on topic %s for client with ClientID: %s\n",
-         PAYLOAD, TOPIC, CLIENTID);
+		   "on topic %s for client with ClientID: %s\n",
+		   PAYLOAD, TOPIC, CLIENTID);
 	while (!finished)
-		#if defined(_WIN32)
-			Sleep(100);
-		#else
-			usleep(10000L);
-		#endif
+#if defined(_WIN32)
+		Sleep(100);
+#else
+		usleep(10000L);
+#endif
 
 	MQTTAsync_destroy(&client);
- 	return rc;
+	return rc;
 }
-  

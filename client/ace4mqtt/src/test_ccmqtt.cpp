@@ -10,7 +10,8 @@ int main(int argc, char *argv[])
     param.qos = 1;
     param.timeout = 10000;
     // std::thread t(mqttSub, param);
-    std::thread t(pub);
+    // std::thread t(pub);
+    std::thread t(mqttPub, param);
     t.join();
     return 0;
 }

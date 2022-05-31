@@ -24,6 +24,12 @@ if(EXAMPLES)
     add_executable(MQTTClient_publish src/MQTTClient_publish.c)
     target_link_libraries(MQTTClient_publish Threads::Threads paho-mqtt3c)
 
+    add_executable(MQTTAsync_subscribe src/MQTTAsync_subscribe.c)
+    target_link_libraries(MQTTAsync_subscribe Threads::Threads paho-mqtt3a)
+
+    add_executable(MQTTAsync_publish src/MQTTAsync_publish.c)
+    target_link_libraries(MQTTAsync_publish Threads::Threads paho-mqtt3a)
+
     add_executable(test_cmqtt src/test_cmqtt.cpp)
     target_link_libraries(test_cmqtt Threads::Threads paho-mqtt3a)
 

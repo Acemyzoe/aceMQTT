@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include "MQTTClient.h"
-#include "lib_mqtt.h"
+#include "mqttLib.h"
 
 #define USER_NAME_LEN_MAX 100
 #define PASSWORD_LEN_MAX 100

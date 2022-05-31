@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../include/lib_mqtt.h
+../include/mqttLib.h
 
 /home/ace/文档/aceMQTT/client/libmqtt/test/test_thread.cpp
-lib_mqtt.h
-/home/ace/文档/aceMQTT/client/libmqtt/test/lib_mqtt.h
+mqttLib.h
+/home/ace/文档/aceMQTT/client/libmqtt/test/mqttLib.h
 stdio.h
 -
 unistd.h

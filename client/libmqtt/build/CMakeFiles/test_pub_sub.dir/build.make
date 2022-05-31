@@ -70,29 +70,29 @@ CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/test/test_pub_sub.cpp -o CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.s
 
-CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o: CMakeFiles/test_pub_sub.dir/flags.make
-CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o: ../include/lib_mqtt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o   -c /home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c
+CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o: CMakeFiles/test_pub_sub.dir/flags.make
+CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o: ../include/mqttLib.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o   -c /home/ace/文档/aceMQTT/client/libmqtt/include/mqttLib.c
 
-CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c > CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.i
+CMakeFiles/test_pub_sub.dir/include/mqttLib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_pub_sub.dir/include/mqttLib.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ace/文档/aceMQTT/client/libmqtt/include/mqttLib.c > CMakeFiles/test_pub_sub.dir/include/mqttLib.c.i
 
-CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/include/lib_mqtt.c -o CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.s
+CMakeFiles/test_pub_sub.dir/include/mqttLib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_pub_sub.dir/include/mqttLib.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ace/文档/aceMQTT/client/libmqtt/include/mqttLib.c -o CMakeFiles/test_pub_sub.dir/include/mqttLib.c.s
 
 # Object files for target test_pub_sub
 test_pub_sub_OBJECTS = \
 "CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.o" \
-"CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o"
+"CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o"
 
 # External object files for target test_pub_sub
 test_pub_sub_EXTERNAL_OBJECTS =
 
 test_pub_sub: CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.o
-test_pub_sub: CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o
+test_pub_sub: CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o
 test_pub_sub: CMakeFiles/test_pub_sub.dir/build.make
 test_pub_sub: CMakeFiles/test_pub_sub.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test_pub_sub"

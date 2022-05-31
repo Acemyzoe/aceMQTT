@@ -1,5 +1,5 @@
-#ifndef __LIB_MQTT_H__
-#define __LIB_MQTT_H__
+#ifndef __MQTT_LIB_H__
+#define __MQTT_LIB_H__
 
 enum MQTT_QOS
 {

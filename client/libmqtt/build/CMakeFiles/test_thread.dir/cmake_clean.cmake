@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_thread.dir/include/lib_mqtt.c.o"
+  "CMakeFiles/test_thread.dir/include/mqttLib.c.o"
   "CMakeFiles/test_thread.dir/test/test_thread.cpp.o"
   "test_thread"
   "test_thread.pdb"

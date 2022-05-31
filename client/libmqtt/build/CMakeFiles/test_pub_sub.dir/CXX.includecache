@@ -6,3 +6,19 @@
 
 #IncludeRegexTransform: 
 
+../include/mqttLib.h
+
+/home/ace/文档/aceMQTT/client/libmqtt/test/test_pub_sub.cpp
+stdio.h
+-
+unistd.h
+-
+string.h
+-
+mqttLib.h
+/home/ace/文档/aceMQTT/client/libmqtt/test/mqttLib.h
+ctime
+-
+iostream
+-
+

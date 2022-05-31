@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o"
+  "CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o"
   "CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.o"
   "test_pub_sub"
   "test_pub_sub.pdb"

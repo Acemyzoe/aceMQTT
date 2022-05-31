@@ -136,35 +136,51 @@ test_pub_sub/fast:
 	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/build
 .PHONY : test_pub_sub/fast
 
-include/lib_mqtt.o: include/lib_mqtt.c.o
+#=============================================================================
+# Target rules for targets named libmqtt
 
-.PHONY : include/lib_mqtt.o
+# Build rule for target.
+libmqtt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libmqtt
+.PHONY : libmqtt
+
+# fast build rule for target.
+libmqtt/fast:
+	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/build
+.PHONY : libmqtt/fast
+
+include/mqttLib.o: include/mqttLib.c.o
+
+.PHONY : include/mqttLib.o
 
 # target to build an object file
-include/lib_mqtt.c.o:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/lib_mqtt.c.o
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.o
-.PHONY : include/lib_mqtt.c.o
+include/mqttLib.c.o:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/mqttLib.c.o
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o
+	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/include/mqttLib.c.o
+.PHONY : include/mqttLib.c.o
 
-include/lib_mqtt.i: include/lib_mqtt.c.i
+include/mqttLib.i: include/mqttLib.c.i
 
-.PHONY : include/lib_mqtt.i
+.PHONY : include/mqttLib.i
 
 # target to preprocess a source file
-include/lib_mqtt.c.i:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/lib_mqtt.c.i
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.i
-.PHONY : include/lib_mqtt.c.i
+include/mqttLib.c.i:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/mqttLib.c.i
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/mqttLib.c.i
+	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/include/mqttLib.c.i
+.PHONY : include/mqttLib.c.i
 
-include/lib_mqtt.s: include/lib_mqtt.c.s
+include/mqttLib.s: include/mqttLib.c.s
 
-.PHONY : include/lib_mqtt.s
+.PHONY : include/mqttLib.s
 
 # target to generate assembly for a file
-include/lib_mqtt.c.s:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/lib_mqtt.c.s
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/lib_mqtt.c.s
-.PHONY : include/lib_mqtt.c.s
+include/mqttLib.c.s:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/include/mqttLib.c.s
+	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/mqttLib.c.s
+	$(MAKE) -f CMakeFiles/libmqtt.dir/build.make CMakeFiles/libmqtt.dir/include/mqttLib.c.s
+.PHONY : include/mqttLib.c.s
 
 test/test_pub_sub.o: test/test_pub_sub.cpp.o
 
@@ -230,9 +246,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... test_thread"
 	@echo "... test_pub_sub"
-	@echo "... include/lib_mqtt.o"
-	@echo "... include/lib_mqtt.i"
-	@echo "... include/lib_mqtt.s"
+	@echo "... libmqtt"
+	@echo "... include/mqttLib.o"
+	@echo "... include/mqttLib.i"
+	@echo "... include/mqttLib.s"
 	@echo "... test/test_pub_sub.o"
 	@echo "... test/test_pub_sub.i"
 	@echo "... test/test_pub_sub.s"

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ace/文档/client4mqtt-main/include 
+CXX_INCLUDES = -I/home/ace/文档/aceMQTT/client/client4mqtt/include 
 

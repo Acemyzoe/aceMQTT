@@ -20,9 +20,9 @@ pthread.h
 semaphore.h
 -
 
-/home/ace/文档/client4mqtt-main/test/test_tm.cpp
+/home/ace/文档/aceMQTT/client/client4mqtt/test/test_tm.cpp
 ThreadModel.h
-/home/ace/文档/client4mqtt-main/test/ThreadModel.h
+/home/ace/文档/aceMQTT/client/client4mqtt/test/ThreadModel.h
 unistd.h
 -
 iostream

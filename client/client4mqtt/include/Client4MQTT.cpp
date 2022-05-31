@@ -7,8 +7,11 @@
 #include <windows.h>
 #endif
 
+// #define debug
 void OutputDebugString(const char *sFormat, ...)
 {
+#ifdef debug
+
     char sLine[128] = {0};
     va_list va;
     va_start(va, sFormat);
@@ -24,6 +27,7 @@ void OutputDebugString(const char *sFormat, ...)
 
 #ifdef __windows__
     ::OutputDebugStringA(strOutput.c_str());
+#endif
 #endif
 }
 

@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/test_c4q.dir/test/test_c4q.cpp.o  -o test_c4q   -L/home/ace/文档/client4mqtt-main/lib  -Wl,-rpath,/home/ace/文档/client4mqtt-main/lib libClient4MQTT.a libThreadModel.a -lpaho-mqtt3c -lpthread 
+/usr/bin/c++     CMakeFiles/test_c4q.dir/test/test_c4q.cpp.o  -o test_c4q   -L/home/ace/文档/aceMQTT/client/client4mqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/client4mqtt/lib libClient4MQTT.a libThreadModel.a -lpaho-mqtt3c -lpthread 

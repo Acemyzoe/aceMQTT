@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ace/文档/client4mqtt-main
+CMAKE_SOURCE_DIR = /home/ace/文档/aceMQTT/client/client4mqtt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ace/文档/client4mqtt-main/build
+CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/client4mqtt/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Client4MQTT.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Client4MQTT.dir/flags.make
 
 CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o: CMakeFiles/Client4MQTT.dir/flags.make
 CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o: ../include/Client4MQTT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/client4mqtt-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o -c /home/ace/文档/client4mqtt-main/include/Client4MQTT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ace/文档/aceMQTT/client/client4mqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o -c /home/ace/文档/aceMQTT/client/client4mqtt/include/Client4MQTT.cpp
 
 CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ace/文档/client4mqtt-main/include/Client4MQTT.cpp > CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ace/文档/aceMQTT/client/client4mqtt/include/Client4MQTT.cpp > CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.i
 
 CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ace/文档/client4mqtt-main/include/Client4MQTT.cpp -o CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ace/文档/aceMQTT/client/client4mqtt/include/Client4MQTT.cpp -o CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.s
 
 # Object files for target Client4MQTT
 Client4MQTT_OBJECTS = \
@@ -80,7 +80,7 @@ Client4MQTT_EXTERNAL_OBJECTS =
 libClient4MQTT.a: CMakeFiles/Client4MQTT.dir/include/Client4MQTT.cpp.o
 libClient4MQTT.a: CMakeFiles/Client4MQTT.dir/build.make
 libClient4MQTT.a: CMakeFiles/Client4MQTT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ace/文档/client4mqtt-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libClient4MQTT.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ace/文档/aceMQTT/client/client4mqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libClient4MQTT.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Client4MQTT.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client4MQTT.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/Client4MQTT.dir/clean:
 .PHONY : CMakeFiles/Client4MQTT.dir/clean
 
 CMakeFiles/Client4MQTT.dir/depend:
-	cd /home/ace/文档/client4mqtt-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ace/文档/client4mqtt-main /home/ace/文档/client4mqtt-main /home/ace/文档/client4mqtt-main/build /home/ace/文档/client4mqtt-main/build /home/ace/文档/client4mqtt-main/build/CMakeFiles/Client4MQTT.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ace/文档/aceMQTT/client/client4mqtt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ace/文档/aceMQTT/client/client4mqtt /home/ace/文档/aceMQTT/client/client4mqtt /home/ace/文档/aceMQTT/client/client4mqtt/build /home/ace/文档/aceMQTT/client/client4mqtt/build /home/ace/文档/aceMQTT/client/client4mqtt/build/CMakeFiles/Client4MQTT.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Client4MQTT.dir/depend
 

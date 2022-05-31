@@ -4,4 +4,4 @@
 CMakeFiles/test_c4q.dir/test/test_c4q.cpp.o
  ../include/Client4MQTT.h
  ../include/ThreadModel.h
- /home/ace/文档/client4mqtt-main/test/test_c4q.cpp
+ /home/ace/文档/aceMQTT/client/client4mqtt/test/test_c4q.cpp

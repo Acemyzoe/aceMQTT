@@ -30,7 +30,7 @@ pthread.h
 semaphore.h
 -
 
-/home/ace/文档/client4mqtt-main/test/test_c4q.cpp
+/home/ace/文档/aceMQTT/client/client4mqtt/test/test_c4q.cpp
 stdio.h
 -
 stdlib.h
@@ -38,5 +38,5 @@ stdlib.h
 unistd.h
 -
 Client4MQTT.h
-/home/ace/文档/client4mqtt-main/test/Client4MQTT.h
+/home/ace/文档/aceMQTT/client/client4mqtt/test/Client4MQTT.h
 

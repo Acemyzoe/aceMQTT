@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/ace/文档/client4mqtt-main/include/Client4MQTT.cpp
+/home/ace/文档/aceMQTT/client/client4mqtt/include/Client4MQTT.cpp
 Client4MQTT.h
-/home/ace/文档/client4mqtt-main/include/Client4MQTT.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/Client4MQTT.h
 stdarg.h
 -
 string.h
@@ -16,17 +16,17 @@ string.h
 windows.h
 -
 
-/home/ace/文档/client4mqtt-main/include/Client4MQTT.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/Client4MQTT.h
 string
 -
 vector
 -
 MQTTClient.h
-/home/ace/文档/client4mqtt-main/include/MQTTClient.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/MQTTClient.h
 ThreadModel.h
-/home/ace/文档/client4mqtt-main/include/ThreadModel.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/ThreadModel.h
 
-/home/ace/文档/client4mqtt-main/include/ThreadModel.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/ThreadModel.h
 string
 -
 map

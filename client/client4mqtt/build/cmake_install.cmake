@@ -1,4 +1,4 @@
-# Install script for directory: /home/ace/文档/client4mqtt-main
+# Install script for directory: /home/ace/文档/aceMQTT/client/client4mqtt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ace/文档/client4mqtt-main/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ace/文档/aceMQTT/client/client4mqtt/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

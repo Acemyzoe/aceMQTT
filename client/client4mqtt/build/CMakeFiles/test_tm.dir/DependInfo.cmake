@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ace/文档/client4mqtt-main/test/test_tm.cpp" "/home/ace/文档/client4mqtt-main/build/CMakeFiles/test_tm.dir/test/test_tm.cpp.o"
+  "/home/ace/文档/aceMQTT/client/client4mqtt/test/test_tm.cpp" "/home/ace/文档/aceMQTT/client/client4mqtt/build/CMakeFiles/test_tm.dir/test/test_tm.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ace/文档/client4mqtt-main/build/CMakeFiles/ThreadModel.dir/DependInfo.cmake"
+  "/home/ace/文档/aceMQTT/client/client4mqtt/build/CMakeFiles/ThreadModel.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/ace/文档/client4mqtt-main/include/ThreadModel.cpp
+/home/ace/文档/aceMQTT/client/client4mqtt/include/ThreadModel.cpp
 ThreadModel.h
-/home/ace/文档/client4mqtt-main/include/ThreadModel.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/ThreadModel.h
 unistd.h
 -
 sys/time.h
@@ -18,7 +18,7 @@ windows.h
 sys/timeb.h
 -
 
-/home/ace/文档/client4mqtt-main/include/ThreadModel.h
+/home/ace/文档/aceMQTT/client/client4mqtt/include/ThreadModel.h
 string
 -
 map

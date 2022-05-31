@@ -1,0 +1,2 @@
+/usr/bin/ar qc libThreadModel.a  CMakeFiles/ThreadModel.dir/include/ThreadModel.cpp.o
+/usr/bin/ranlib libThreadModel.a

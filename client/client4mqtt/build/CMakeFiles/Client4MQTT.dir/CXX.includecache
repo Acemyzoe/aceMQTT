@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ace/文档/client4mqtt-main/include/Client4MQTT.cpp
+Client4MQTT.h
+/home/ace/文档/client4mqtt-main/include/Client4MQTT.h
+stdarg.h
+-
+string.h
+-
+windows.h
+-
+
+/home/ace/文档/client4mqtt-main/include/Client4MQTT.h
+string
+-
+vector
+-
+MQTTClient.h
+/home/ace/文档/client4mqtt-main/include/MQTTClient.h
+ThreadModel.h
+/home/ace/文档/client4mqtt-main/include/ThreadModel.h
+
+/home/ace/文档/client4mqtt-main/include/ThreadModel.h
+string
+-
+map
+-
+list
+-
+functional
+-
+pthread.h
+-
+semaphore.h
+-
+

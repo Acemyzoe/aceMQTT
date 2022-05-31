@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ThreadModel.h
+string
+-
+map
+-
+list
+-
+functional
+-
+pthread.h
+-
+semaphore.h
+-
+
+/home/ace/文档/client4mqtt-main/test/test_tm.cpp
+ThreadModel.h
+/home/ace/文档/client4mqtt-main/test/ThreadModel.h
+unistd.h
+-
+iostream
+-
+thread
+-
+

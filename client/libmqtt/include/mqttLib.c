@@ -77,7 +77,7 @@ void connlost(void *context, char *cause)
 	printf("reconnect successd\n");
 }
 
-MQTT_HANDLE mqtt_init(char *client_id, char *addres, char *username, char *password, MSG_RECIVE_CALLBACL recive_msg_callback)
+MQTT_HANDLE mqtt_init(const char *client_id, const char *addres, const char *username, const char *password, MSG_RECIVE_CALLBACL recive_msg_callback)
 {
 
 	static client_info client_info;
@@ -125,7 +125,7 @@ MQTT_HANDLE mqtt_init(char *client_id, char *addres, char *username, char *passw
 	return &client_info.client;
 }
 
-int mqtt_subscribe(MQTT_HANDLE handle, char *topic, int qos)
+int mqtt_subscribe(MQTT_HANDLE handle, const char *topic, int qos)
 {
 	int rc = 0;
 
@@ -143,7 +143,7 @@ int mqtt_subscribe(MQTT_HANDLE handle, char *topic, int qos)
 	return 0;
 }
 
-int mqtt_publish(MQTT_HANDLE handle, char *topic, char *msg, int msg_len, int qos)
+int mqtt_publish(MQTT_HANDLE handle, const char *topic, char *msg, int msg_len, int qos)
 {
 	int rc = 0;
 	MQTTClient_message pubmsg = MQTTClient_message_initializer;

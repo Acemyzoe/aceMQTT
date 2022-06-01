@@ -24,7 +24,7 @@ extern "C"
 	 * @param[in] recive_callback 接受订阅信息回调函数
 	 * @return 		success mqtt_handle，failure NULL
 	 */
-	MQTT_HANDLE mqtt_init(char *client_id, char *addres, char *username, char *password, MSG_RECIVE_CALLBACL recive_msg_callback);
+	MQTT_HANDLE mqtt_init(const char *client_id, const char *addres, const char *username, const char *password, MSG_RECIVE_CALLBACL recive_msg_callback);
 	/**
 	 * @brief 订阅消息
 	 * @param[in] mqtt_handle mqtt句柄
@@ -32,7 +32,7 @@ extern "C"
 	 * @param[in] qos 消息质量
 	 * @return 		success 0，failure -1
 	 */
-	int mqtt_subscribe(MQTT_HANDLE handle, char *topic, int qos);
+	int mqtt_subscribe(MQTT_HANDLE handle, const char *topic, int qos);
 	/**
 	 * @brief 发布消息
 	 * @param[in] mqtt_handle mqtt句柄
@@ -41,7 +41,7 @@ extern "C"
 	 * @param[in] msglen 消息长度
 	 * @return 		success 0，failure -1
 	 */
-	int mqtt_publish(MQTT_HANDLE handle, char *topic, char *msg, int msg_len, int qos);
+	int mqtt_publish(MQTT_HANDLE handle, const char *topic, char *msg, int msg_len, int qos);
 	/**
 	 * @brief 销毁mqtt
 	 * @param[in] mqtt_handle mqtt句柄

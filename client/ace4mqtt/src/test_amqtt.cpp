@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
     param.clientId = "ExampleClient";
     param.qos = 1;
     param.timeout = 10000;
+
     // auto t1 = [&param]()
     // {
     //     int ch;
@@ -20,10 +21,13 @@ int main(int argc, char *argv[])
     // };
     // std::thread ts(t1);
 
-    mqttPub(param);
-    mqttdestroy();
-    mqttPub(param);
-    mqttdestroy();
+    auto t2 = [&]()
+    {
+        mqttPub(param);
+    };
+
+    std::thread tp(t2);
+    tp.join();
 
     return 0;
 }

@@ -1,4 +1,4 @@
-// #include "cmqtt.hpp"
+#include "cmqtt.hpp"
 // int test_cmqtt()
 // {
 //     cmqttParam param;
@@ -20,5 +20,6 @@
 int main()
 {
     // test_cmqtt();
+    pub();
     return 0;
 }

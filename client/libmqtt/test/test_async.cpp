@@ -20,6 +20,7 @@ int test_thread()
 	param.clientId = "12345";
 	param.qos = 1;
 	param.timeout = 5000;
+	param.recive_callback = recive_msg_callback;
 
 	mqttInit(param);
 

@@ -3,6 +3,7 @@
 #include <string>
 #include <unistd.h>
 #include "MQTTAsync.h"
+typedef void (*MSG_RECIVE_CALLBACL)(char *topic, char *msg, int msglen);
 typedef struct mqttParam
 {
     std::string address;
@@ -13,27 +14,26 @@ typedef struct mqttParam
     int timeout;
     std::string username;
     std::string password;
+    MSG_RECIVE_CALLBACL recive_callback;
 } mqttParam;
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
-    typedef void (*MSG_RECIVE_CALLBACL)(char *topic, char *msg, int msglen);
 
     MQTTAsync client;
     mqttParam m_mqttParam;
     int disc_finished = 0;
     int subscribed = 0;
     int finished = 0;
-    MSG_RECIVE_CALLBACL recive_callback = NULL; //接受订阅信息外部回调
 
     int msgarrvd(void *context, char *topicName, int topicLen, MQTTAsync_message *message)
     {
         if (!message)
             return -1;
         // 回调
-        recive_callback(topicName, (char *)message->payload, message->payloadlen);
+        m_mqttParam.recive_callback(topicName, (char *)message->payload, message->payloadlen);
         MQTTAsync_freeMessage(&message);
         MQTTAsync_free(topicName);
         return 1;

@@ -105,7 +105,7 @@ extern "C"
         }
     }
 
-    int mqttSub(mqttParam mqttParam)
+    int mqttSub(mqttParam &mqttParam)
     {
         m_mqttParam = mqttParam;
 
@@ -231,7 +231,7 @@ extern "C"
         return 1;
     }
 
-    int mqttPub(mqttParam mqttParam)
+    int mqttPub(mqttParam &mqttParam)
     {
         m_mqttParam = mqttParam;
         MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;

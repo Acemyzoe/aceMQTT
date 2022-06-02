@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/test_async2.dir/test/test_async2.cpp.o CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.o  -o test_async2   -L/home/ace/文档/aceMQTT/client/libmqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/libmqtt/lib -lpaho-mqtt3a -lpthread 
+/usr/bin/c++     CMakeFiles/test_async2.dir/test/test_async2.cpp.o  -o test_async2   -L/home/ace/文档/aceMQTT/client/libmqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/libmqtt/lib libmqttLibAsync.a -lpaho-mqtt3a -lpthread 

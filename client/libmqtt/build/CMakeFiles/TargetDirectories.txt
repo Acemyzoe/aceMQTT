@@ -1,6 +1,7 @@
-/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/rebuild_cache.dir
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/edit_cache.dir
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_async.dir
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_client.dir
+/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/rebuild_cache.dir
+/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/mqttLibAsync.dir
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/mqttLib.dir
 /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles/test_async2.dir

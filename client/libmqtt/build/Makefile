@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/libmqtt/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -135,6 +135,19 @@ test_client: cmake_check_build_system
 test_client/fast:
 	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/build
 .PHONY : test_client/fast
+
+#=============================================================================
+# Target rules for targets named mqttLibAsync
+
+# Build rule for target.
+mqttLibAsync: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mqttLibAsync
+.PHONY : mqttLibAsync
+
+# fast build rule for target.
+mqttLibAsync/fast:
+	$(MAKE) -f CMakeFiles/mqttLibAsync.dir/build.make CMakeFiles/mqttLibAsync.dir/build
+.PHONY : mqttLibAsync/fast
 
 #=============================================================================
 # Target rules for targets named mqttLib
@@ -198,7 +211,7 @@ include/mqttLibAsync.o: include/mqttLibAsync.cpp.o
 
 # target to build an object file
 include/mqttLibAsync.cpp.o:
-	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.o
+	$(MAKE) -f CMakeFiles/mqttLibAsync.dir/build.make CMakeFiles/mqttLibAsync.dir/include/mqttLibAsync.cpp.o
 .PHONY : include/mqttLibAsync.cpp.o
 
 include/mqttLibAsync.i: include/mqttLibAsync.cpp.i
@@ -207,7 +220,7 @@ include/mqttLibAsync.i: include/mqttLibAsync.cpp.i
 
 # target to preprocess a source file
 include/mqttLibAsync.cpp.i:
-	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.i
+	$(MAKE) -f CMakeFiles/mqttLibAsync.dir/build.make CMakeFiles/mqttLibAsync.dir/include/mqttLibAsync.cpp.i
 .PHONY : include/mqttLibAsync.cpp.i
 
 include/mqttLibAsync.s: include/mqttLibAsync.cpp.s
@@ -216,7 +229,7 @@ include/mqttLibAsync.s: include/mqttLibAsync.cpp.s
 
 # target to generate assembly for a file
 include/mqttLibAsync.cpp.s:
-	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.s
+	$(MAKE) -f CMakeFiles/mqttLibAsync.dir/build.make CMakeFiles/mqttLibAsync.dir/include/mqttLibAsync.cpp.s
 .PHONY : include/mqttLibAsync.cpp.s
 
 test/test_async.o: test/test_async.cpp.o
@@ -306,10 +319,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test_async"
 	@echo "... test_client"
+	@echo "... rebuild_cache"
+	@echo "... mqttLibAsync"
 	@echo "... mqttLib"
 	@echo "... test_async2"
 	@echo "... include/mqttLib.o"

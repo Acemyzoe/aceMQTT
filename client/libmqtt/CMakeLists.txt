@@ -21,7 +21,13 @@ if(EXAMPLES)
     STATIC 
     ${PROJECT_SOURCE_DIR}/include/mqttLib.c
     ${PROJECT_SOURCE_DIR}/include/mqttLib.h
-  )
+    )
+
+     add_library(mqttLibAsync
+     STATIC 
+     ${PROJECT_SOURCE_DIR}/include/mqttLibAsync.cpp
+     ${PROJECT_SOURCE_DIR}/include/mqttLibAsync.h
+    )
 
     add_executable(test_client test/test_client.cpp include/mqttLib.c)
     target_link_libraries(test_client Threads::Threads paho-mqtt3c)
@@ -29,7 +35,7 @@ if(EXAMPLES)
     add_executable(test_async test/test_async.cpp)
     target_link_libraries(test_async mqttLib Threads::Threads paho-mqtt3a)
 
-    add_executable(test_async2 test/test_async2.cpp include/mqttLibAsync.cpp)
-    target_link_libraries(test_async2 Threads::Threads paho-mqtt3a)
+    add_executable(test_async2 test/test_async2.cpp)
+    target_link_libraries(test_async2 mqttLibAsync Threads::Threads paho-mqtt3a)
 
 endif()

@@ -10,24 +10,17 @@ int main(int argc, char *argv[])
     param.qos = 1;
     param.timeout = 10000;
 
-    // auto t1 = [&param]()
-    // {
-    //     int ch;
-    //     mqttSub(param);
-    //     do
-    //     {
-    //         ch = getchar();
-    //     } while (ch != 'Q' && ch != 'q');
-    // };
-    // std::thread ts(t1);
+    subscribe(param);
 
-    auto t2 = [&]()
+    auto t = [&]()
     {
-        mqttPub(param);
+        for (;;)
+        {
+            pubish();
+        }
     };
 
-    std::thread tp(t2);
+    std::thread tp(t);
     tp.join();
-
     return 0;
 }

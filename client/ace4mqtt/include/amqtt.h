@@ -105,7 +105,7 @@ extern "C"
         }
     }
 
-    int mqttSub(mqttParam &mqttParam)
+    int subscribe(mqttParam &mqttParam)
     {
         m_mqttParam = mqttParam;
 
@@ -188,19 +188,19 @@ extern "C"
 
     void onSend(void *context, MQTTAsync_successData *response)
     {
-        MQTTAsync m_client = (MQTTAsync)context;
-        MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
-        int rc;
+        // MQTTAsync m_client = (MQTTAsync)context;
+        // MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
+        // int rc;
 
-        printf("Message with token value %d delivery confirmed\n", response->token);
-        opts.onSuccess = onDisconnect;
-        opts.onFailure = onDisconnectFailure;
-        opts.context = client;
-        if ((rc = MQTTAsync_disconnect(m_client, &opts)) != MQTTASYNC_SUCCESS)
-        {
-            printf("Failed to start disconnect, return code %d\n", rc);
-            exit(EXIT_FAILURE);
-        }
+        // printf("Message with token value %d delivery confirmed\n", response->token);
+        // opts.onSuccess = onDisconnect;
+        // opts.onFailure = onDisconnectFailure;
+        // opts.context = client;
+        // if ((rc = MQTTAsync_disconnect(m_client, &opts)) != MQTTASYNC_SUCCESS)
+        // {
+        //     printf("Failed to start disconnect, return code %d\n", rc);
+        //     exit(EXIT_FAILURE);
+        // }
     }
 
     void pubonConnect(void *context, MQTTAsync_successData *response)
@@ -225,13 +225,34 @@ extern "C"
         }
     }
 
+    int pubish()
+    {
+        MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
+        MQTTAsync_message pubmsg = MQTTAsync_message_initializer;
+        int rc;
+
+        printf("Successful connection\n");
+        opts.onSuccess = onSend;
+        opts.onFailure = onSendFailure;
+        opts.context = client;
+        pubmsg.payload = (char *)m_mqttParam.payload.c_str();
+        pubmsg.payloadlen = (int)(m_mqttParam.payload.length());
+        pubmsg.qos = m_mqttParam.qos;
+        pubmsg.retained = 0;
+        if ((rc = MQTTAsync_sendMessage(client, m_mqttParam.topic.c_str(), &pubmsg, &opts)) != MQTTASYNC_SUCCESS)
+        {
+            printf("Failed to start sendMessage, return code %d\n", rc);
+            exit(EXIT_FAILURE);
+        }
+    }
+
     int messageArrived(void *context, char *topicName, int topicLen, MQTTAsync_message *m)
     {
         /* not expecting any messages */
         return 1;
     }
 
-    int mqttPub(mqttParam &mqttParam)
+    int mqttPubonce(mqttParam &mqttParam)
     {
         m_mqttParam = mqttParam;
         MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;
@@ -271,29 +292,6 @@ extern "C"
         return rc;
     }
 
-    int mqttdestroy()
-    {
-        MQTTAsync_disconnectOptions disc_opts = MQTTAsync_disconnectOptions_initializer;
-        disc_opts.onSuccess = onDisconnect;
-        disc_opts.onFailure = onDisconnectFailure;
-        int rc;
-        if ((rc = MQTTAsync_disconnect(client, &disc_opts)) != MQTTASYNC_SUCCESS)
-        {
-            printf("Failed to start disconnect, return code %d\n", rc);
-            rc = EXIT_FAILURE;
-            MQTTAsync_destroy(&client);
-        }
-        while (!disc_finished)
-        {
-#if defined(_WIN32)
-            Sleep(100);
-#else
-        usleep(10000L);
-#endif
-        }
-        MQTTAsync_destroy(&client);
-        return rc;
-    }
 #ifdef __cplusplus
 }
 #endif

@@ -33,7 +33,7 @@ if(EXAMPLES)
     add_executable(test_cmqtt src/test_cmqtt.cpp)
     target_link_libraries(test_cmqtt Threads::Threads paho-mqtt3a)
 
-    add_executable(test_ccmqtt src/test_ccmqtt.cpp)
-    target_link_libraries(test_ccmqtt Threads::Threads paho-mqtt3c)
+    add_executable(test_amqtt src/test_amqtt.cpp)
+    target_link_libraries(test_amqtt Threads::Threads paho-mqtt3a)
 
 endif()

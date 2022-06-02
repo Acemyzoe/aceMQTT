@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include <string>
 #include <functional>
 #include <algorithm>
 #include <thread>
@@ -35,14 +34,14 @@ public:
     int mqttPublish(std::string topic, std::string message);
     int mqttSubscribe(std::string topic);
 
-private:
     MQTTAsync m_client;
     MQTTAsync_connectOptions m_connect_options;
     MQTTAsync_message m_message;
     MQTTAsync_token m_token;
-    static cmqttParam m_param;
-    static int finished;
+    cmqttParam m_param;
+    int finished;
 
+private:
     static void connlost(void *context, char *cause);
     static void onDisconnectFailure(void *context, MQTTAsync_failureData *response);
     static void onDisconnect(void *context, MQTTAsync_successData *response);

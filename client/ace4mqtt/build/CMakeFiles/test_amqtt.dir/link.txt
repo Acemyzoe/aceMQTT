@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test_amqtt.dir/src/test_amqtt.cpp.o  -o test_amqtt   -L/home/ace/文档/aceMQTT/client/ace4mqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/ace4mqtt/lib -lpaho-mqtt3a -lpthread 

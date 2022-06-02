@@ -1,8 +1,8 @@
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/edit_cache.dir
+/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/test_amqtt.dir
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/test_cmqtt.dir
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/MQTTAsync_publish.dir
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/MQTTAsync_subscribe.dir
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/rebuild_cache.dir
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/MQTTClient_publish.dir
-/home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/test_ccmqtt.dir
 /home/ace/文档/aceMQTT/client/ace4mqtt/build/CMakeFiles/MQTTClient_subscribe.dir

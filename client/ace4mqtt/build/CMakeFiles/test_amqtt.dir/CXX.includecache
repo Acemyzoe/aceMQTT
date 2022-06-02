@@ -6,21 +6,23 @@
 
 #IncludeRegexTransform: 
 
-../include/ccmqtt.h
+../include/amqtt.h
 stdio.h
 -
 stdlib.h
 -
 string
 -
-MQTTClient.h
-../include/MQTTClient.h
-cstring
+string.h
 -
+unistd.h
+-
+MQTTAsync.h
+../include/MQTTAsync.h
 
-/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_ccmqtt.cpp
-ccmqtt.h
-/home/ace/文档/aceMQTT/client/ace4mqtt/src/ccmqtt.h
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/test_amqtt.cpp
+amqtt.h
+/home/ace/文档/aceMQTT/client/ace4mqtt/src/amqtt.h
 thread
 -
 

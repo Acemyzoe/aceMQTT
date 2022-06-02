@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/mqttLibasync.h
+../include/mqttLibasync.hpp
 stdio.h
 -
 stdlib.h
@@ -19,8 +19,8 @@ MQTTAsync.h
 ../include/MQTTAsync.h
 
 /home/ace/文档/aceMQTT/client/libmqtt/test/test_async.cpp
-mqttLibasync.h
-/home/ace/文档/aceMQTT/client/libmqtt/test/mqttLibasync.h
+mqttLibasync.hpp
+/home/ace/文档/aceMQTT/client/libmqtt/test/mqttLibasync.hpp
 ctime
 -
 iostream

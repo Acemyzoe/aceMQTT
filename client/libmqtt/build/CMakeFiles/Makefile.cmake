@@ -54,4 +54,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_async.dir/DependInfo.cmake"
   "CMakeFiles/test_client.dir/DependInfo.cmake"
   "CMakeFiles/mqttLib.dir/DependInfo.cmake"
+  "CMakeFiles/test_async2.dir/DependInfo.cmake"
   )

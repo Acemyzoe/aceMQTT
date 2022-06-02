@@ -29,4 +29,7 @@ if(EXAMPLES)
     add_executable(test_async test/test_async.cpp)
     target_link_libraries(test_async mqttLib Threads::Threads paho-mqtt3a)
 
+    add_executable(test_async2 test/test_async2.cpp include/mqttLibAsync.cpp)
+    target_link_libraries(test_async2 Threads::Threads paho-mqtt3a)
+
 endif()

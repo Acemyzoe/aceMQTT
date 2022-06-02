@@ -149,6 +149,19 @@ mqttLib/fast:
 	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/build
 .PHONY : mqttLib/fast
 
+#=============================================================================
+# Target rules for targets named test_async2
+
+# Build rule for target.
+test_async2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_async2
+.PHONY : test_async2
+
+# fast build rule for target.
+test_async2/fast:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/build
+.PHONY : test_async2/fast
+
 include/mqttLib.o: include/mqttLib.c.o
 
 .PHONY : include/mqttLib.o
@@ -179,6 +192,33 @@ include/mqttLib.c.s:
 	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/include/mqttLib.c.s
 .PHONY : include/mqttLib.c.s
 
+include/mqttLibAsync.o: include/mqttLibAsync.cpp.o
+
+.PHONY : include/mqttLibAsync.o
+
+# target to build an object file
+include/mqttLibAsync.cpp.o:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.o
+.PHONY : include/mqttLibAsync.cpp.o
+
+include/mqttLibAsync.i: include/mqttLibAsync.cpp.i
+
+.PHONY : include/mqttLibAsync.i
+
+# target to preprocess a source file
+include/mqttLibAsync.cpp.i:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.i
+.PHONY : include/mqttLibAsync.cpp.i
+
+include/mqttLibAsync.s: include/mqttLibAsync.cpp.s
+
+.PHONY : include/mqttLibAsync.s
+
+# target to generate assembly for a file
+include/mqttLibAsync.cpp.s:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/include/mqttLibAsync.cpp.s
+.PHONY : include/mqttLibAsync.cpp.s
+
 test/test_async.o: test/test_async.cpp.o
 
 .PHONY : test/test_async.o
@@ -205,6 +245,33 @@ test/test_async.s: test/test_async.cpp.s
 test/test_async.cpp.s:
 	$(MAKE) -f CMakeFiles/test_async.dir/build.make CMakeFiles/test_async.dir/test/test_async.cpp.s
 .PHONY : test/test_async.cpp.s
+
+test/test_async2.o: test/test_async2.cpp.o
+
+.PHONY : test/test_async2.o
+
+# target to build an object file
+test/test_async2.cpp.o:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/test/test_async2.cpp.o
+.PHONY : test/test_async2.cpp.o
+
+test/test_async2.i: test/test_async2.cpp.i
+
+.PHONY : test/test_async2.i
+
+# target to preprocess a source file
+test/test_async2.cpp.i:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/test/test_async2.cpp.i
+.PHONY : test/test_async2.cpp.i
+
+test/test_async2.s: test/test_async2.cpp.s
+
+.PHONY : test/test_async2.s
+
+# target to generate assembly for a file
+test/test_async2.cpp.s:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/test/test_async2.cpp.s
+.PHONY : test/test_async2.cpp.s
 
 test/test_client.o: test/test_client.cpp.o
 
@@ -244,12 +311,19 @@ help:
 	@echo "... test_async"
 	@echo "... test_client"
 	@echo "... mqttLib"
+	@echo "... test_async2"
 	@echo "... include/mqttLib.o"
 	@echo "... include/mqttLib.i"
 	@echo "... include/mqttLib.s"
+	@echo "... include/mqttLibAsync.o"
+	@echo "... include/mqttLibAsync.i"
+	@echo "... include/mqttLibAsync.s"
 	@echo "... test/test_async.o"
 	@echo "... test/test_async.i"
 	@echo "... test/test_async.s"
+	@echo "... test/test_async2.o"
+	@echo "... test/test_async2.i"
+	@echo "... test/test_async2.s"
 	@echo "... test/test_client.o"
 	@echo "... test/test_client.i"
 	@echo "... test/test_client.s"

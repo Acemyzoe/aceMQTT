@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/test_thread.dir/test/test_thread.cpp.o  -o test_thread   -L/home/ace/文档/aceMQTT/client/libmqtt/lib  -Wl,-rpath,/home/ace/文档/aceMQTT/client/libmqtt/lib libmqttLib.a -lpaho-mqtt3c -lpthread 

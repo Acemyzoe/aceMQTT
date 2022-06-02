@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /home/ace/文档/aceMQTT/client/libmqtt/build
 all: CMakeFiles/test_async.dir/all
 all: CMakeFiles/test_client.dir/all
 all: CMakeFiles/mqttLib.dir/all
+all: CMakeFiles/test_async2.dir/all
 
 .PHONY : all
 
@@ -68,6 +69,7 @@ preinstall:
 clean: CMakeFiles/test_async.dir/clean
 clean: CMakeFiles/test_client.dir/clean
 clean: CMakeFiles/mqttLib.dir/clean
+clean: CMakeFiles/test_async2.dir/clean
 
 .PHONY : clean
 
@@ -105,7 +107,7 @@ CMakeFiles/test_async.dir/clean:
 CMakeFiles/test_client.dir/all:
 	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/depend
 	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=5,6,7 "Built target test_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=8,9,10 "Built target test_client"
 .PHONY : CMakeFiles/test_client.dir/all
 
 # Build rule for subdir invocation for target.
@@ -151,6 +153,33 @@ mqttLib: CMakeFiles/mqttLib.dir/rule
 CMakeFiles/mqttLib.dir/clean:
 	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/clean
 .PHONY : CMakeFiles/mqttLib.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_async2.dir
+
+# All Build rule for target.
+CMakeFiles/test_async2.dir/all:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/depend
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles --progress-num=5,6,7 "Built target test_async2"
+.PHONY : CMakeFiles/test_async2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_async2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_async2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ace/文档/aceMQTT/client/libmqtt/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_async2.dir/rule
+
+# Convenience name for target.
+test_async2: CMakeFiles/test_async2.dir/rule
+
+.PHONY : test_async2
+
+# clean rule for target.
+CMakeFiles/test_async2.dir/clean:
+	$(MAKE) -f CMakeFiles/test_async2.dir/build.make CMakeFiles/test_async2.dir/clean
+.PHONY : CMakeFiles/test_async2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -42,6 +42,11 @@ extern "C"
      */
     int pubish(mqttParam &mqttParam);
 
+    /**
+     * @brief 断开mqtt
+     * @param[in] mqttparam mqtt参数
+     */
+    int mqttDestroy(mqttParam &mqttParam);
 #ifdef __cplusplus
 }
 #endif

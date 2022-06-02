@@ -24,11 +24,12 @@ int test_thread()
 
     std::thread pub([&param]()
                     {
-		for (;;)
+		for (int i = 0; i < 2; i++)
 		{
 			pubish(param);
-			std::this_thread::sleep_for(std::chrono::seconds(5));
-		} });
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+		} 
+        mqttDestroy(param); });
     pub.join();
     return 0;
 }

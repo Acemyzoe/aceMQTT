@@ -178,3 +178,18 @@ int pubish(mqttParam &mqttParam)
     }
     return rc;
 }
+
+int mqttDestroy(mqttParam &mqttParam)
+{
+    MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
+    int rc;
+    opts.context = client;
+    if ((rc = MQTTAsync_disconnect(client, &opts)) != MQTTASYNC_SUCCESS)
+    {
+        printf("Failed to disconnect, return code %d\n", rc);
+        exit(EXIT_FAILURE);
+    }
+
+    MQTTAsync_destroy(&client);
+    return rc;
+}

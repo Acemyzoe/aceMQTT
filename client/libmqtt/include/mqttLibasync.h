@@ -23,7 +23,17 @@ extern "C"
 #endif
 
     MQTTAsync client;
-    mqttParam m_mqttParam;
+    mqttParam m_mqttParam = {
+        .address = "localhost:1883",
+        .topic = "testing",
+        .payload = "",
+        .clientId = "12345",
+        .qos = 1,
+        .timeout = 5000,
+        .username = "",
+        .password = "",
+        .recive_callback = NULL};
+
     int disc_finished = 0;
     int subscribed = 0;
     int finished = 0;

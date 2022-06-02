@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/mqttLibasync.h
+stdio.h
+-
+stdlib.h
+-
+string
+-
+unistd.h
+-
+MQTTAsync.h
+../include/MQTTAsync.h
+
+/home/ace/文档/aceMQTT/client/libmqtt/test/test_async.cpp
+mqttLibasync.h
+/home/ace/文档/aceMQTT/client/libmqtt/test/mqttLibasync.h
+ctime
+-
+iostream
+-
+thread
+-
+

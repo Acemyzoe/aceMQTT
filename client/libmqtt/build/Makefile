@@ -111,30 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_thread
+# Target rules for targets named test_async
 
 # Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
+test_async: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_async
+.PHONY : test_async
 
 # fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
+test_async/fast:
+	$(MAKE) -f CMakeFiles/test_async.dir/build.make CMakeFiles/test_async.dir/build
+.PHONY : test_async/fast
 
 #=============================================================================
-# Target rules for targets named test_pub_sub
+# Target rules for targets named test_client
 
 # Build rule for target.
-test_pub_sub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_pub_sub
-.PHONY : test_pub_sub
+test_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_client
+.PHONY : test_client
 
 # fast build rule for target.
-test_pub_sub/fast:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/build
-.PHONY : test_pub_sub/fast
+test_client/fast:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/build
+.PHONY : test_client/fast
 
 #=============================================================================
 # Target rules for targets named mqttLib
@@ -155,7 +155,7 @@ include/mqttLib.o: include/mqttLib.c.o
 
 # target to build an object file
 include/mqttLib.c.o:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/mqttLib.c.o
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqttLib.c.o
 	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/include/mqttLib.c.o
 .PHONY : include/mqttLib.c.o
 
@@ -165,7 +165,7 @@ include/mqttLib.i: include/mqttLib.c.i
 
 # target to preprocess a source file
 include/mqttLib.c.i:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/mqttLib.c.i
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqttLib.c.i
 	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/include/mqttLib.c.i
 .PHONY : include/mqttLib.c.i
 
@@ -175,63 +175,63 @@ include/mqttLib.s: include/mqttLib.c.s
 
 # target to generate assembly for a file
 include/mqttLib.c.s:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/include/mqttLib.c.s
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/include/mqttLib.c.s
 	$(MAKE) -f CMakeFiles/mqttLib.dir/build.make CMakeFiles/mqttLib.dir/include/mqttLib.c.s
 .PHONY : include/mqttLib.c.s
 
-test/test_pub_sub.o: test/test_pub_sub.cpp.o
+test/test_async.o: test/test_async.cpp.o
 
-.PHONY : test/test_pub_sub.o
-
-# target to build an object file
-test/test_pub_sub.cpp.o:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.o
-.PHONY : test/test_pub_sub.cpp.o
-
-test/test_pub_sub.i: test/test_pub_sub.cpp.i
-
-.PHONY : test/test_pub_sub.i
-
-# target to preprocess a source file
-test/test_pub_sub.cpp.i:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.i
-.PHONY : test/test_pub_sub.cpp.i
-
-test/test_pub_sub.s: test/test_pub_sub.cpp.s
-
-.PHONY : test/test_pub_sub.s
-
-# target to generate assembly for a file
-test/test_pub_sub.cpp.s:
-	$(MAKE) -f CMakeFiles/test_pub_sub.dir/build.make CMakeFiles/test_pub_sub.dir/test/test_pub_sub.cpp.s
-.PHONY : test/test_pub_sub.cpp.s
-
-test/test_thread.o: test/test_thread.cpp.o
-
-.PHONY : test/test_thread.o
+.PHONY : test/test_async.o
 
 # target to build an object file
-test/test_thread.cpp.o:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.o
-.PHONY : test/test_thread.cpp.o
+test/test_async.cpp.o:
+	$(MAKE) -f CMakeFiles/test_async.dir/build.make CMakeFiles/test_async.dir/test/test_async.cpp.o
+.PHONY : test/test_async.cpp.o
 
-test/test_thread.i: test/test_thread.cpp.i
+test/test_async.i: test/test_async.cpp.i
 
-.PHONY : test/test_thread.i
+.PHONY : test/test_async.i
 
 # target to preprocess a source file
-test/test_thread.cpp.i:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.i
-.PHONY : test/test_thread.cpp.i
+test/test_async.cpp.i:
+	$(MAKE) -f CMakeFiles/test_async.dir/build.make CMakeFiles/test_async.dir/test/test_async.cpp.i
+.PHONY : test/test_async.cpp.i
 
-test/test_thread.s: test/test_thread.cpp.s
+test/test_async.s: test/test_async.cpp.s
 
-.PHONY : test/test_thread.s
+.PHONY : test/test_async.s
 
 # target to generate assembly for a file
-test/test_thread.cpp.s:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.s
-.PHONY : test/test_thread.cpp.s
+test/test_async.cpp.s:
+	$(MAKE) -f CMakeFiles/test_async.dir/build.make CMakeFiles/test_async.dir/test/test_async.cpp.s
+.PHONY : test/test_async.cpp.s
+
+test/test_client.o: test/test_client.cpp.o
+
+.PHONY : test/test_client.o
+
+# target to build an object file
+test/test_client.cpp.o:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/test/test_client.cpp.o
+.PHONY : test/test_client.cpp.o
+
+test/test_client.i: test/test_client.cpp.i
+
+.PHONY : test/test_client.i
+
+# target to preprocess a source file
+test/test_client.cpp.i:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/test/test_client.cpp.i
+.PHONY : test/test_client.cpp.i
+
+test/test_client.s: test/test_client.cpp.s
+
+.PHONY : test/test_client.s
+
+# target to generate assembly for a file
+test/test_client.cpp.s:
+	$(MAKE) -f CMakeFiles/test_client.dir/build.make CMakeFiles/test_client.dir/test/test_client.cpp.s
+.PHONY : test/test_client.cpp.s
 
 # Help Target
 help:
@@ -241,18 +241,18 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_thread"
-	@echo "... test_pub_sub"
+	@echo "... test_async"
+	@echo "... test_client"
 	@echo "... mqttLib"
 	@echo "... include/mqttLib.o"
 	@echo "... include/mqttLib.i"
 	@echo "... include/mqttLib.s"
-	@echo "... test/test_pub_sub.o"
-	@echo "... test/test_pub_sub.i"
-	@echo "... test/test_pub_sub.s"
-	@echo "... test/test_thread.o"
-	@echo "... test/test_thread.i"
-	@echo "... test/test_thread.s"
+	@echo "... test/test_async.o"
+	@echo "... test/test_async.i"
+	@echo "... test/test_async.s"
+	@echo "... test/test_client.o"
+	@echo "... test/test_client.i"
+	@echo "... test/test_client.s"
 .PHONY : help
 
 

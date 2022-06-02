@@ -23,10 +23,10 @@ if(EXAMPLES)
     ${PROJECT_SOURCE_DIR}/include/mqttLib.h
   )
 
-    add_executable(test_pub_sub test/test_pub_sub.cpp include/mqttLib.c)
-    target_link_libraries(test_pub_sub Threads::Threads paho-mqtt3c)
+    add_executable(test_client test/test_client.cpp include/mqttLib.c)
+    target_link_libraries(test_client Threads::Threads paho-mqtt3c)
 
-    add_executable(test_thread test/test_thread.cpp)
-    target_link_libraries(test_thread mqttLib Threads::Threads paho-mqtt3c)
+    add_executable(test_async test/test_async.cpp)
+    target_link_libraries(test_async mqttLib Threads::Threads paho-mqtt3a)
 
 endif()

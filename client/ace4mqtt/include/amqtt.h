@@ -261,7 +261,7 @@ extern "C"
             MQTTAsync_destroy(&client);
         }
 
-        while (!finished)
+        while (!disc_finished)
 #if defined(_WIN32)
             Sleep(100);
 #else

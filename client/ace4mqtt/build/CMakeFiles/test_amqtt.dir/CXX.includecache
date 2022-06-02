@@ -13,8 +13,6 @@ stdlib.h
 -
 string
 -
-string.h
--
 unistd.h
 -
 MQTTAsync.h

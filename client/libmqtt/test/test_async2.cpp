@@ -17,6 +17,7 @@ int test_thread()
     param.address = "localhost:1883";
     param.topic = "testing";
     param.payload = dt;
+    param.qos = 2;
     param.clientId = "12345";
     param.recive_callback = recive_msg_callback;
 
@@ -24,10 +25,16 @@ int test_thread()
 
     std::thread pub([&param]()
                     {
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 22; i++)
 		{
+            std::cout << i << std::endl;
 			pubish(param);
-			std::this_thread::sleep_for(std::chrono::seconds(1));
+			std::this_thread::sleep_for(std::chrono::seconds(1));      
+            if (i == 10)
+            {
+                param.payload = "hello world";
+            }
+
 		} 
         mqttDestroy(param); });
     pub.join();

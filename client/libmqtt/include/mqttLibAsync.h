@@ -33,18 +33,11 @@ extern "C"
 #endif
 
     /**
-     * @brief 初始化mqtt
+     * @brief 初始化mqtt,订阅消息
      * @param[in] mqttParam mqtt参数
      * @return 		success mqtt_handle，failure NULL
      */
     int mqttInit(mqttParam &mqttParam);
-
-    /**
-     * @brief 订阅消息
-     * @param[in] mqttparam mqtt参数
-     * @return 		success 0，failure -1
-     */
-    int subscribe(mqttParam &mqttParam);
 
     /**
      * @brief 发布消息
@@ -61,4 +54,4 @@ extern "C"
 #ifdef __cplusplus
 }
 #endif
-#endif
+#endif // __MQTT_LIB_ASYNC_H__

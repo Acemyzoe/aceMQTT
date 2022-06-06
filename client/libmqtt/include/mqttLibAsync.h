@@ -3,7 +3,17 @@
 #pragma once
 #include <string>
 
+/**
+ * @brief 订阅消息回调函数
+ * @param topic 订阅的主题
+ * @param msg 消息内容
+ * @param msglen 消息长度
+ */
 typedef void (*MSG_RECIVE_CALLBACL)(char *topic, char *msg, int msglen);
+
+/**
+ * @brief MQTT 参数结构体
+ */
 typedef struct mqttParam
 {
     std::string address = "localhost:1883";
@@ -16,6 +26,7 @@ typedef struct mqttParam
     std::string password = "";
     MSG_RECIVE_CALLBACL recive_callback = NULL;
 } mqttParam;
+
 #ifdef __cplusplus
 extern "C"
 {
